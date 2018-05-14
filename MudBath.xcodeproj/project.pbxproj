@@ -7,10 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		66CB066820A91DA1003973D1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66CB066720A91DA1003973D1 /* main.cpp */; };
+		660659D920A91DED00E5579D /* MudBathEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 660659D820A91DED00E5579D /* MudBathEngine.cpp */; };
+		660659E920A91E3F00E5579D /* Riverbank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 660659DE20A91E2000E5579D /* Riverbank.cpp */; };
+		660659EA20A9210A00E5579D /* MudBathEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 660659D820A91DED00E5579D /* MudBathEngine.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		660659E420A91E3800E5579D /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		66CB066220A91DA1003973D1 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -23,11 +34,24 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		660659D720A91DED00E5579D /* MudBathEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MudBathEngine.h; sourceTree = "<group>"; };
+		660659D820A91DED00E5579D /* MudBathEngine.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MudBathEngine.cpp; sourceTree = "<group>"; };
+		660659DB20A91E1200E5579D /* Renderer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Renderer.h; sourceTree = "<group>"; };
+		660659DC20A91E1200E5579D /* PhysicsModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhysicsModule.h; sourceTree = "<group>"; };
+		660659DD20A91E1200E5579D /* AILogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AILogic.h; sourceTree = "<group>"; };
+		660659DE20A91E2000E5579D /* Riverbank.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Riverbank.cpp; sourceTree = "<group>"; };
+		660659E820A91E3800E5579D /* Riverbank */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Riverbank; sourceTree = BUILT_PRODUCTS_DIR; };
 		66CB066420A91DA1003973D1 /* MudBath */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MudBath; sourceTree = BUILT_PRODUCTS_DIR; };
-		66CB066720A91DA1003973D1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		660659E320A91E3800E5579D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66CB066120A91DA1003973D1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -38,9 +62,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		660659DA20A91E1200E5579D /* engineAssets */ = {
+			isa = PBXGroup;
+			children = (
+				660659DB20A91E1200E5579D /* Renderer.h */,
+				660659DC20A91E1200E5579D /* PhysicsModule.h */,
+				660659DD20A91E1200E5579D /* AILogic.h */,
+			);
+			path = engineAssets;
+			sourceTree = "<group>";
+		};
 		66CB065B20A91DA1003973D1 = {
 			isa = PBXGroup;
 			children = (
+				660659DE20A91E2000E5579D /* Riverbank.cpp */,
+				660659DA20A91E1200E5579D /* engineAssets */,
 				66CB066620A91DA1003973D1 /* MudBath */,
 				66CB066520A91DA1003973D1 /* Products */,
 			);
@@ -50,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				66CB066420A91DA1003973D1 /* MudBath */,
+				660659E820A91E3800E5579D /* Riverbank */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,7 +94,8 @@
 		66CB066620A91DA1003973D1 /* MudBath */ = {
 			isa = PBXGroup;
 			children = (
-				66CB066720A91DA1003973D1 /* main.cpp */,
+				660659D820A91DED00E5579D /* MudBathEngine.cpp */,
+				660659D720A91DED00E5579D /* MudBathEngine.h */,
 			);
 			path = MudBath;
 			sourceTree = "<group>";
@@ -65,6 +103,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		660659E020A91E3800E5579D /* Riverbank */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 660659E520A91E3800E5579D /* Build configuration list for PBXNativeTarget "Riverbank" */;
+			buildPhases = (
+				660659E120A91E3800E5579D /* Sources */,
+				660659E320A91E3800E5579D /* Frameworks */,
+				660659E420A91E3800E5579D /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Riverbank;
+			productName = MudBath;
+			productReference = 660659E820A91E3800E5579D /* Riverbank */;
+			productType = "com.apple.product-type.tool";
+		};
 		66CB066320A91DA1003973D1 /* MudBath */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66CB066B20A91DA1003973D1 /* Build configuration list for PBXNativeTarget "MudBath" */;
@@ -109,22 +164,50 @@
 			projectRoot = "";
 			targets = (
 				66CB066320A91DA1003973D1 /* MudBath */,
+				660659E020A91E3800E5579D /* Riverbank */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		660659E120A91E3800E5579D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				660659EA20A9210A00E5579D /* MudBathEngine.cpp in Sources */,
+				660659E920A91E3F00E5579D /* Riverbank.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66CB066020A91DA1003973D1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66CB066820A91DA1003973D1 /* main.cpp in Sources */,
+				660659D920A91DED00E5579D /* MudBathEngine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		660659E620A91E3800E5579D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		660659E720A91E3800E5579D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		66CB066920A91DA1003973D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -253,6 +336,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		660659E520A91E3800E5579D /* Build configuration list for PBXNativeTarget "Riverbank" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				660659E620A91E3800E5579D /* Debug */,
+				660659E720A91E3800E5579D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		66CB065F20A91DA1003973D1 /* Build configuration list for PBXProject "MudBath" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
