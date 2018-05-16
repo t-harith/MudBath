@@ -9,7 +9,8 @@ int main()
     MBEngine engine;
     
     // Open Window
-    engine.setWindowParams("Riverbank Sandbox", 640, 480, false);
+    engine.windowInit(3, 3, CORE, true);
+    engine.setWindowParams("Riverbank Sandbox", 640, 480, false, NULL);
     
     engine.init();
     

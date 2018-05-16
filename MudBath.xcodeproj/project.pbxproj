@@ -10,6 +10,11 @@
 		660659D920A91DED00E5579D /* MudBathEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 660659D820A91DED00E5579D /* MudBathEngine.cpp */; };
 		660659E920A91E3F00E5579D /* Riverbank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 660659DE20A91E2000E5579D /* Riverbank.cpp */; };
 		660659EA20A9210A00E5579D /* MudBathEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 660659D820A91DED00E5579D /* MudBathEngine.cpp */; };
+		660659ED20A94B1B00E5579D /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659EC20A94B1B00E5579D /* libglfw3.a */; };
+		660659EF20A94B2200E5579D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659EE20A94B2200E5579D /* IOKit.framework */; };
+		660659F120A94B2700E5579D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659F020A94B2700E5579D /* CoreVideo.framework */; };
+		660659F320A94B6300E5579D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659F220A94B6300E5579D /* Cocoa.framework */; };
+		660659F620AC67F000E5579D /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 660659F420A94C1100E5579D /* glad.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -41,6 +46,11 @@
 		660659DD20A91E1200E5579D /* AILogic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AILogic.h; sourceTree = "<group>"; };
 		660659DE20A91E2000E5579D /* Riverbank.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Riverbank.cpp; sourceTree = "<group>"; };
 		660659E820A91E3800E5579D /* Riverbank */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Riverbank; sourceTree = BUILT_PRODUCTS_DIR; };
+		660659EC20A94B1B00E5579D /* libglfw3.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libglfw3.a; path = deps/GLFW/libglfw3.a; sourceTree = "<group>"; };
+		660659EE20A94B2200E5579D /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		660659F020A94B2700E5579D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		660659F220A94B6300E5579D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		660659F420A94C1100E5579D /* glad.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = glad.c; path = deps/glad.c; sourceTree = "<group>"; };
 		66CB066420A91DA1003973D1 /* MudBath */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MudBath; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -49,6 +59,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				660659F320A94B6300E5579D /* Cocoa.framework in Frameworks */,
+				660659F120A94B2700E5579D /* CoreVideo.framework in Frameworks */,
+				660659EF20A94B2200E5579D /* IOKit.framework in Frameworks */,
+				660659ED20A94B1B00E5579D /* libglfw3.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,13 +86,26 @@
 			path = engineAssets;
 			sourceTree = "<group>";
 		};
+		660659EB20A94B1A00E5579D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				660659F220A94B6300E5579D /* Cocoa.framework */,
+				660659F020A94B2700E5579D /* CoreVideo.framework */,
+				660659EE20A94B2200E5579D /* IOKit.framework */,
+				660659EC20A94B1B00E5579D /* libglfw3.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		66CB065B20A91DA1003973D1 = {
 			isa = PBXGroup;
 			children = (
+				660659F420A94C1100E5579D /* glad.c */,
 				660659DE20A91E2000E5579D /* Riverbank.cpp */,
 				660659DA20A91E1200E5579D /* engineAssets */,
 				66CB066620A91DA1003973D1 /* MudBath */,
 				66CB066520A91DA1003973D1 /* Products */,
+				660659EB20A94B1A00E5579D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -174,6 +201,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				660659F620AC67F000E5579D /* glad.c in Sources */,
 				660659EA20A9210A00E5579D /* MudBathEngine.cpp in Sources */,
 				660659E920A91E3F00E5579D /* Riverbank.cpp in Sources */,
 			);
@@ -195,6 +223,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/deps/GLFW",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -204,6 +236,10 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/deps/GLFW",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
