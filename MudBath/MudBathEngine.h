@@ -21,7 +21,8 @@
 
 enum Profile
 {
-    CORE=GLFW_OPENGL_CORE_PROFILE, COMPAT=GLFW_OPENGL_COMPAT_PROFILE
+    CORE=GLFW_OPENGL_CORE_PROFILE,
+    COMPAT=GLFW_OPENGL_COMPAT_PROFILE
 };
 
 class MBEngine
@@ -44,7 +45,10 @@ public:
         std::cout << "MBEngine Destructor" << std::endl;
     }
     void init();
+    
+    /* Window Setup Funcs */
     void windowInit(int version_maj, int version_min, unsigned int profile, bool forward_compat);
+    static void key_callback(GLFWwindow* window, int key, int scanncode, int action, int mods);
     void setWindowParams(std::string name, int width, int height, bool full_screen, GLFWwindow* share);
     
 };
