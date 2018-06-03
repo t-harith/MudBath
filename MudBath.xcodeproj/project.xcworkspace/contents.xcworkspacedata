@@ -2,6 +2,31 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:MudBath.xcodeproj">
+      location = "group:/Users/dev/OpenGL/MudBath/MudBath/deps/vulkan/glad.c">
+   </FileRef>
+   <FileRef
+      location = "group:../deps/glad.c">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/dev/OpenGL/MudBath/MudBath/MudBathEngine.cpp">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/dev/OpenGL/MudBath/MudBath/MudBathEngine.h">
+   </FileRef>
+   <Group
+      location = "group:../testFrameworks"
+      name = "testFrameworks">
+      <FileRef
+         location = "group:Marshland.cpp">
+      </FileRef>
+      <FileRef
+         location = "group:Centrifudge.cpp">
+      </FileRef>
+      <FileRef
+         location = "group:Riverbank.cpp">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "self:">
    </FileRef>
 </Workspace>
