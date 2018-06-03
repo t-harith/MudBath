@@ -10,13 +10,7 @@
 		66EB668120C451AE0048B3AA /* Riverbank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66EB667A20C4513F0048B3AA /* Riverbank.cpp */; };
 		66EB668220C451B30048B3AA /* Centrifudge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66EB667920C4513F0048B3AA /* Centrifudge.cpp */; };
 		66EB668320C451B90048B3AA /* Marshland.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66EB667820C4513F0048B3AA /* Marshland.cpp */; };
-		66EB668F20C453D50048B3AA /* MudBathEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66EB667B20C4515D0048B3AA /* MudBathEngine.cpp */; };
 		66EB669920C4563B0048B3AA /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 66EB668C20C4534B0048B3AA /* glad.c */; };
-		66EB669A20C456A60048B3AA /* libglad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EB669520C456340048B3AA /* libglad.a */; };
-		66EB669B20C4573E0048B3AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659F220A94B6300E5579D /* Cocoa.framework */; };
-		66EB669C20C457420048B3AA /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659EE20A94B2200E5579D /* IOKit.framework */; };
-		66EB669D20C4574F0048B3AA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659F020A94B2700E5579D /* CoreVideo.framework */; };
-		66EB669E20C457650048B3AA /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EB667520C450CB0048B3AA /* libglfw3.a */; };
 		66EB66A820C4582E0048B3AA /* MudBathEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66EB667B20C4515D0048B3AA /* MudBathEngine.cpp */; };
 		66EB66AA20C458560048B3AA /* libglad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EB669520C456340048B3AA /* libglad.a */; };
 		66EB66AB20C4585B0048B3AA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659F020A94B2700E5579D /* CoreVideo.framework */; };
@@ -30,15 +24,6 @@
 
 /* Begin PBXCopyFilesBuildPhase section */
 		660659E420A91E3800E5579D /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-		66CB066220A91DA1003973D1 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -76,7 +61,6 @@
 		660659EE20A94B2200E5579D /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		660659F020A94B2700E5579D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		660659F220A94B6300E5579D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
-		66CB066420A91DA1003973D1 /* MudBath */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MudBath; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EB664C20C359EC0048B3AA /* Centrifudge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Centrifudge; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EB665D20C35C010048B3AA /* Marshland */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Marshland; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EB666020C44E2B0048B3AA /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
@@ -111,18 +95,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				66EB66AF20C458E30048B3AA /* libMudBathEngine.dylib in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		66CB066120A91DA1003973D1 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				66EB669E20C457650048B3AA /* libglfw3.a in Frameworks */,
-				66EB669D20C4574F0048B3AA /* CoreVideo.framework in Frameworks */,
-				66EB669C20C457420048B3AA /* IOKit.framework in Frameworks */,
-				66EB669B20C4573E0048B3AA /* Cocoa.framework in Frameworks */,
-				66EB669A20C456A60048B3AA /* libglad.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,7 +174,6 @@
 		66CB066520A91DA1003973D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				66CB066420A91DA1003973D1 /* MudBath */,
 				660659E820A91E3800E5579D /* Riverbank */,
 				66EB664C20C359EC0048B3AA /* Centrifudge */,
 				66EB665D20C35C010048B3AA /* Marshland */,
@@ -330,23 +301,6 @@
 			productReference = 660659E820A91E3800E5579D /* Riverbank */;
 			productType = "com.apple.product-type.tool";
 		};
-		66CB066320A91DA1003973D1 /* MudBath */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 66CB066B20A91DA1003973D1 /* Build configuration list for PBXNativeTarget "MudBath" */;
-			buildPhases = (
-				66CB066020A91DA1003973D1 /* Sources */,
-				66CB066120A91DA1003973D1 /* Frameworks */,
-				66CB066220A91DA1003973D1 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MudBath;
-			productName = MudBath;
-			productReference = 66CB066420A91DA1003973D1 /* MudBath */;
-			productType = "com.apple.product-type.tool";
-		};
 		66EB663E20C359EC0048B3AA /* Centrifudge */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 66EB664920C359EC0048B3AA /* Build configuration list for PBXNativeTarget "Centrifudge" */;
@@ -424,9 +378,6 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Tejas Harith";
 				TargetAttributes = {
-					66CB066320A91DA1003973D1 = {
-						CreatedOnToolsVersion = 9.3;
-					};
 					66EB669420C456340048B3AA = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
@@ -447,7 +398,6 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				66CB066320A91DA1003973D1 /* MudBath */,
 				660659E020A91E3800E5579D /* Riverbank */,
 				66EB663E20C359EC0048B3AA /* Centrifudge */,
 				66EB664F20C35C010048B3AA /* Marshland */,
@@ -463,14 +413,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				66EB668120C451AE0048B3AA /* Riverbank.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		66CB066020A91DA1003973D1 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				66EB668F20C453D50048B3AA /* MudBathEngine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -644,31 +586,6 @@
 			};
 			name = Release;
 		};
-		66CB066C20A91DA1003973D1 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/deps/GLFW",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Debug;
-		};
-		66CB066D20A91DA1003973D1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/deps/GLFW",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-			};
-			name = Release;
-		};
 		66EB664A20C359EC0048B3AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -792,15 +709,6 @@
 			buildConfigurations = (
 				66CB066920A91DA1003973D1 /* Debug */,
 				66CB066A20A91DA1003973D1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		66CB066B20A91DA1003973D1 /* Build configuration list for PBXNativeTarget "MudBath" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				66CB066C20A91DA1003973D1 /* Debug */,
-				66CB066D20A91DA1003973D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
