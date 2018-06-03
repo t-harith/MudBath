@@ -18,35 +18,16 @@ class windowLoadingError{};
 MBEngine::MBEngine(/* config options */
                    /* output filename */)
 : state(EngineState::INIT), window(0), basicRend(0), basicPhys(0), basicAI(0), mbLogger(0) {
-    if(mbLogger == NULL){
-        mbLogger = new Logger("MBE");
-    }
-    if(basicRend == NULL){
-        basicRend = new Renderer();
-    }
-    if(basicPhys == NULL){
-        basicPhys = new PhysicsCompute();
-    }
-    if(basicAI == NULL){
-        basicAI = new AILogic();
-    }
     
+    // initialize single instance of each subsystem
+    loadSubsystems();
+
 }
 
 MBEngine::~MBEngine()
 {
-    if(mbLogger != NULL){
-        delete mbLogger;
-    }
-    if(basicRend != NULL){
-        delete basicRend;
-    }
-    if(basicPhys != NULL){
-        delete basicPhys;
-    }
-    if(basicAI != NULL){
-        delete basicAI;
-    }
+    // clear subsystems
+    clearSubsystems();
 }
 
 void MBEngine::windowInit(int version_maj, int version_min, unsigned int profile, bool forward_compat)
@@ -118,5 +99,38 @@ void MBEngine::init()
     glfwTerminate();
 }
 
+/*
+ *  Helper Functions
+ */
 
+void MBEngine::loadSubsystems()
+{
+    if(mbLogger == NULL){
+        mbLogger = new Logger("MBE");
+    }
+    if(basicRend == NULL){
+        basicRend = new Renderer();
+    }
+    if(basicPhys == NULL){
+        basicPhys = new PhysicsModule();
+    }
+    if(basicAI == NULL){
+        basicAI = new AILogic();
+    }
+}
 
+void MBEngine::clearSubsystems()
+{
+    if(mbLogger != NULL){
+        delete mbLogger;
+    }
+    if(basicRend != NULL){
+        delete basicRend;
+    }
+    if(basicPhys != NULL){
+        delete basicPhys;
+    }
+    if(basicAI != NULL){
+        delete basicAI;
+    }
+}

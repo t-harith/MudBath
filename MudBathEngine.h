@@ -18,7 +18,10 @@
 #include "engineAssets/Renderer.h"
 #include "engineAssets/PhysicsModule.h"
 #include "engineAssets/AILogic.h"
-#include "Logging/Logger.h"
+
+#ifndef Logger_h
+    #include "Logging/Logger.h"
+#endif
 
 enum EngineState
 {
@@ -42,10 +45,13 @@ private:
     GLFWwindow* window;
     
     Renderer* basicRend;
-    PhysicsCompute* basicPhys;
+    PhysicsModule* basicPhys;
     AILogic* basicAI;
     
     Logger* mbLogger;
+    
+    void loadSubsystems();
+    void clearSubsystems();
     
 public:
     MBEngine(/* config options  */

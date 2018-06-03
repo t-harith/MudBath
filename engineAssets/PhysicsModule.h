@@ -6,25 +6,33 @@
 //  Created by Tejas Harith on 5/13/18.
 //
 
-#ifndef PhysicsCompute_h
-#define PhysicsCompute_h
+#ifndef PhysicsModule_h
+#define PhysicsModule_h
 
 
-#endif /* PhysicsCompute_h */
+#endif /* PhysicsModule_h */
 
 #include <iostream>
 
-class PhysicsCompute
+#ifndef Logger_h
+    #include "Logging/Logger.h"
+#endif
+
+class PhysicsModule
 {
 private:
     int state;
+    Logger* pmLogger;
+    
 public:
-    PhysicsCompute()
-    :state(-1){
-        std::cout << "PhysicsCompute Constructor" << std::endl;
+    PhysicsModule()
+    :state(-1), pmLogger(0){
+        if(pmLogger == NULL)
+            pmLogger = new Logger("PM");
+        pmLogger->log("PhysicsModule Constructor");
     }
-    ~PhysicsCompute()
+    ~PhysicsModule()
     {
-        std::cout << "PhysicsCompute Destructor" << std::endl;
+        pmLogger->log("PhysicsModule Destructor");
     }
 };

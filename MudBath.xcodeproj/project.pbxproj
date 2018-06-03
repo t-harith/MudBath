@@ -7,20 +7,76 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66D34FC620C4918D0014F08D /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66D34FBD20C490950014F08D /* Logger.cpp */; };
+		66D34FD220C491E20014F08D /* libglad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EB669520C456340048B3AA /* libglad.a */; };
+		66D34FD320C491E50014F08D /* libLogger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D34FC220C491860014F08D /* libLogger.a */; };
+		66D34FD520C491FD0014F08D /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659EC20A94B1B00E5579D /* libglfw3.a */; };
+		66D34FD720C4937F0014F08D /* libMudBathEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D34FCB20C491C70014F08D /* libMudBathEngine.a */; };
+		66D34FD820C493860014F08D /* libMudBathEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D34FCB20C491C70014F08D /* libMudBathEngine.a */; };
+		66D34FD920C493E10014F08D /* libLogger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D34FC220C491860014F08D /* libLogger.a */; };
+		66D34FDA20C493F10014F08D /* libLogger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D34FC220C491860014F08D /* libLogger.a */; };
+		66D34FDB20C493F80014F08D /* libLogger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D34FC220C491860014F08D /* libLogger.a */; };
+		66D34FF120C49B3F0014F08D /* MudBathEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66EB667B20C4515D0048B3AA /* MudBathEngine.cpp */; };
+		66D34FF220C49CD50014F08D /* libMudBathEngine.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D34FCB20C491C70014F08D /* libMudBathEngine.a */; };
+		66D34FF620C4A01C0014F08D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659F020A94B2700E5579D /* CoreVideo.framework */; };
+		66D34FF720C4A0210014F08D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659EE20A94B2200E5579D /* IOKit.framework */; };
+		66D34FF820C4A0250014F08D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659F220A94B6300E5579D /* Cocoa.framework */; };
+		66D34FF920C4A0970014F08D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659F020A94B2700E5579D /* CoreVideo.framework */; };
+		66D34FFA20C4A09B0014F08D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659EE20A94B2200E5579D /* IOKit.framework */; };
+		66D34FFB20C4A09E0014F08D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659F220A94B6300E5579D /* Cocoa.framework */; };
+		66D34FFC20C4A0A60014F08D /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659F020A94B2700E5579D /* CoreVideo.framework */; };
+		66D34FFD20C4A0AA0014F08D /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659EE20A94B2200E5579D /* IOKit.framework */; };
+		66D34FFE20C4A0B10014F08D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659F220A94B6300E5579D /* Cocoa.framework */; };
 		66EB668120C451AE0048B3AA /* Riverbank.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66EB667A20C4513F0048B3AA /* Riverbank.cpp */; };
 		66EB668220C451B30048B3AA /* Centrifudge.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66EB667920C4513F0048B3AA /* Centrifudge.cpp */; };
 		66EB668320C451B90048B3AA /* Marshland.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66EB667820C4513F0048B3AA /* Marshland.cpp */; };
 		66EB669920C4563B0048B3AA /* glad.c in Sources */ = {isa = PBXBuildFile; fileRef = 66EB668C20C4534B0048B3AA /* glad.c */; };
-		66EB66A820C4582E0048B3AA /* MudBathEngine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66EB667B20C4515D0048B3AA /* MudBathEngine.cpp */; };
-		66EB66AA20C458560048B3AA /* libglad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EB669520C456340048B3AA /* libglad.a */; };
-		66EB66AB20C4585B0048B3AA /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659F020A94B2700E5579D /* CoreVideo.framework */; };
-		66EB66AC20C4585F0048B3AA /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659EE20A94B2200E5579D /* IOKit.framework */; };
-		66EB66AD20C458720048B3AA /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 660659F220A94B6300E5579D /* Cocoa.framework */; };
-		66EB66AE20C4587B0048B3AA /* libglfw3.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EB667520C450CB0048B3AA /* libglfw3.a */; };
-		66EB66AF20C458E30048B3AA /* libMudBathEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EB66A420C458280048B3AA /* libMudBathEngine.dylib */; };
-		66EB66B020C459470048B3AA /* libMudBathEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EB66A420C458280048B3AA /* libMudBathEngine.dylib */; };
-		66EB66B120C459570048B3AA /* libMudBathEngine.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EB66A420C458280048B3AA /* libMudBathEngine.dylib */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		66D34FE520C49A440014F08D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66CB065C20A91DA1003973D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66D34FC120C491860014F08D;
+			remoteInfo = Logger;
+		};
+		66D34FE720C49A440014F08D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66CB065C20A91DA1003973D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66D34FCA20C491C70014F08D;
+			remoteInfo = MudBathEngine;
+		};
+		66D34FE920C49A4A0014F08D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66CB065C20A91DA1003973D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66D34FC120C491860014F08D;
+			remoteInfo = Logger;
+		};
+		66D34FEB20C49A4A0014F08D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66CB065C20A91DA1003973D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66D34FCA20C491C70014F08D;
+			remoteInfo = MudBathEngine;
+		};
+		66D34FED20C49A510014F08D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66CB065C20A91DA1003973D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66D34FC120C491860014F08D;
+			remoteInfo = Logger;
+		};
+		66D34FEF20C49A510014F08D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66CB065C20A91DA1003973D1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 66D34FCA20C491C70014F08D;
+			remoteInfo = MudBathEngine;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		660659E420A91E3800E5579D /* CopyFiles */ = {
@@ -32,13 +88,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
-		66EB664820C359EC0048B3AA /* CopyFiles */ = {
+		66EB664820C359EC0048B3AA /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
 			);
+			name = "Copy Files";
 			runOnlyForDeploymentPostprocessing = 1;
 		};
 		66EB665920C35C010048B3AA /* CopyFiles */ = {
@@ -61,6 +118,9 @@
 		660659EE20A94B2200E5579D /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		660659F020A94B2700E5579D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		660659F220A94B6300E5579D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		66D34FBD20C490950014F08D /* Logger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Logger.cpp; sourceTree = "<group>"; };
+		66D34FC220C491860014F08D /* libLogger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLogger.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		66D34FCB20C491C70014F08D /* libMudBathEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMudBathEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EB664C20C359EC0048B3AA /* Centrifudge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Centrifudge; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EB665D20C35C010048B3AA /* Marshland */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Marshland; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EB666020C44E2B0048B3AA /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
@@ -86,7 +146,6 @@
 		66EB667C20C4515E0048B3AA /* MudBathEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MudBathEngine.h; path = /Users/dev/OpenGL/MudBath/MudBath/MudBathEngine.h; sourceTree = "<absolute>"; };
 		66EB668C20C4534B0048B3AA /* glad.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = glad.c; sourceTree = "<group>"; };
 		66EB669520C456340048B3AA /* libglad.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libglad.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		66EB66A420C458280048B3AA /* libMudBathEngine.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = libMudBathEngine.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +153,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66EB66AF20C458E30048B3AA /* libMudBathEngine.dylib in Frameworks */,
+				66D34FF820C4A0250014F08D /* Cocoa.framework in Frameworks */,
+				66D34FF720C4A0210014F08D /* IOKit.framework in Frameworks */,
+				66D34FF620C4A01C0014F08D /* CoreVideo.framework in Frameworks */,
+				66D34FF220C49CD50014F08D /* libMudBathEngine.a in Frameworks */,
+				66D34FD920C493E10014F08D /* libLogger.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D34FBF20C491860014F08D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D34FC820C491C70014F08D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D34FD520C491FD0014F08D /* libglfw3.a in Frameworks */,
+				66D34FD220C491E20014F08D /* libglad.a in Frameworks */,
+				66D34FD320C491E50014F08D /* libLogger.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +182,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66EB66B020C459470048B3AA /* libMudBathEngine.dylib in Frameworks */,
+				66D34FFB20C4A09E0014F08D /* Cocoa.framework in Frameworks */,
+				66D34FFA20C4A09B0014F08D /* IOKit.framework in Frameworks */,
+				66D34FF920C4A0970014F08D /* CoreVideo.framework in Frameworks */,
+				66D34FDA20C493F10014F08D /* libLogger.a in Frameworks */,
+				66D34FD720C4937F0014F08D /* libMudBathEngine.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,7 +194,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				66EB66B120C459570048B3AA /* libMudBathEngine.dylib in Frameworks */,
+				66D34FFE20C4A0B10014F08D /* Cocoa.framework in Frameworks */,
+				66D34FFD20C4A0AA0014F08D /* IOKit.framework in Frameworks */,
+				66D34FFC20C4A0A60014F08D /* CoreVideo.framework in Frameworks */,
+				66D34FDB20C493F80014F08D /* libLogger.a in Frameworks */,
+				66D34FD820C493860014F08D /* libMudBathEngine.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,18 +206,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		66EB66A120C458280048B3AA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				66EB66AE20C4587B0048B3AA /* libglfw3.a in Frameworks */,
-				66EB66AD20C458720048B3AA /* Cocoa.framework in Frameworks */,
-				66EB66AC20C4585F0048B3AA /* IOKit.framework in Frameworks */,
-				66EB66AB20C4585B0048B3AA /* CoreVideo.framework in Frameworks */,
-				66EB66AA20C458560048B3AA /* libglad.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +254,8 @@
 				66EB664C20C359EC0048B3AA /* Centrifudge */,
 				66EB665D20C35C010048B3AA /* Marshland */,
 				66EB669520C456340048B3AA /* libglad.a */,
-				66EB66A420C458280048B3AA /* libMudBathEngine.dylib */,
+				66D34FC220C491860014F08D /* libLogger.a */,
+				66D34FCB20C491C70014F08D /* libMudBathEngine.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,6 +264,7 @@
 			isa = PBXGroup;
 			children = (
 				66EB666020C44E2B0048B3AA /* Logger.h */,
+				66D34FBD20C490950014F08D /* Logger.cpp */,
 			);
 			path = Logging;
 			sourceTree = "<group>";
@@ -267,14 +345,21 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		66EB669320C456340048B3AA /* Headers */ = {
+		66D34FC020C491860014F08D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		66EB66A220C458280048B3AA /* Headers */ = {
+		66D34FC920C491C70014F08D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66EB669320C456340048B3AA /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -295,11 +380,47 @@
 			buildRules = (
 			);
 			dependencies = (
+				66D34FE820C49A440014F08D /* PBXTargetDependency */,
+				66D34FE620C49A440014F08D /* PBXTargetDependency */,
 			);
 			name = Riverbank;
 			productName = MudBath;
 			productReference = 660659E820A91E3800E5579D /* Riverbank */;
 			productType = "com.apple.product-type.tool";
+		};
+		66D34FC120C491860014F08D /* Logger */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66D34FC320C491870014F08D /* Build configuration list for PBXNativeTarget "Logger" */;
+			buildPhases = (
+				66D34FBE20C491860014F08D /* Sources */,
+				66D34FBF20C491860014F08D /* Frameworks */,
+				66D34FC020C491860014F08D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Logger;
+			productName = Logger;
+			productReference = 66D34FC220C491860014F08D /* libLogger.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		66D34FCA20C491C70014F08D /* MudBathEngine */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 66D34FCC20C491C70014F08D /* Build configuration list for PBXNativeTarget "MudBathEngine" */;
+			buildPhases = (
+				66D34FC720C491C70014F08D /* Sources */,
+				66D34FC820C491C70014F08D /* Frameworks */,
+				66D34FC920C491C70014F08D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MudBathEngine;
+			productName = MudBathEngine;
+			productReference = 66D34FCB20C491C70014F08D /* libMudBathEngine.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 		66EB663E20C359EC0048B3AA /* Centrifudge */ = {
 			isa = PBXNativeTarget;
@@ -307,11 +428,13 @@
 			buildPhases = (
 				66EB663F20C359EC0048B3AA /* Sources */,
 				66EB664320C359EC0048B3AA /* Frameworks */,
-				66EB664820C359EC0048B3AA /* CopyFiles */,
+				66EB664820C359EC0048B3AA /* Copy Files */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				66D34FEA20C49A4A0014F08D /* PBXTargetDependency */,
+				66D34FEC20C49A4A0014F08D /* PBXTargetDependency */,
 			);
 			name = Centrifudge;
 			productName = MudBath;
@@ -329,6 +452,8 @@
 			buildRules = (
 			);
 			dependencies = (
+				66D34FEE20C49A510014F08D /* PBXTargetDependency */,
+				66D34FF020C49A510014F08D /* PBXTargetDependency */,
 			);
 			name = Marshland;
 			productName = MudBath;
@@ -352,23 +477,6 @@
 			productReference = 66EB669520C456340048B3AA /* libglad.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		66EB66A320C458280048B3AA /* MudBathEngine */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 66EB66A520C458290048B3AA /* Build configuration list for PBXNativeTarget "MudBathEngine" */;
-			buildPhases = (
-				66EB66A020C458280048B3AA /* Sources */,
-				66EB66A120C458280048B3AA /* Frameworks */,
-				66EB66A220C458280048B3AA /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = MudBathEngine;
-			productName = MudBath;
-			productReference = 66EB66A420C458280048B3AA /* libMudBathEngine.dylib */;
-			productType = "com.apple.product-type.library.dynamic";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -378,10 +486,13 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Tejas Harith";
 				TargetAttributes = {
-					66EB669420C456340048B3AA = {
+					66D34FC120C491860014F08D = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
-					66EB66A320C458280048B3AA = {
+					66D34FCA20C491C70014F08D = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
+					66EB669420C456340048B3AA = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
 				};
@@ -402,7 +513,8 @@
 				66EB663E20C359EC0048B3AA /* Centrifudge */,
 				66EB664F20C35C010048B3AA /* Marshland */,
 				66EB669420C456340048B3AA /* glad */,
-				66EB66A320C458280048B3AA /* MudBathEngine */,
+				66D34FC120C491860014F08D /* Logger */,
+				66D34FCA20C491C70014F08D /* MudBathEngine */,
 			);
 		};
 /* End PBXProject section */
@@ -413,6 +525,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				66EB668120C451AE0048B3AA /* Riverbank.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D34FBE20C491860014F08D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D34FC620C4918D0014F08D /* Logger.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66D34FC720C491C70014F08D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				66D34FF120C49B3F0014F08D /* MudBathEngine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,15 +568,40 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		66EB66A020C458280048B3AA /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				66EB66A820C4582E0048B3AA /* MudBathEngine.cpp in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		66D34FE620C49A440014F08D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66D34FC120C491860014F08D /* Logger */;
+			targetProxy = 66D34FE520C49A440014F08D /* PBXContainerItemProxy */;
+		};
+		66D34FE820C49A440014F08D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66D34FCA20C491C70014F08D /* MudBathEngine */;
+			targetProxy = 66D34FE720C49A440014F08D /* PBXContainerItemProxy */;
+		};
+		66D34FEA20C49A4A0014F08D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66D34FC120C491860014F08D /* Logger */;
+			targetProxy = 66D34FE920C49A4A0014F08D /* PBXContainerItemProxy */;
+		};
+		66D34FEC20C49A4A0014F08D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66D34FCA20C491C70014F08D /* MudBathEngine */;
+			targetProxy = 66D34FEB20C49A4A0014F08D /* PBXContainerItemProxy */;
+		};
+		66D34FEE20C49A510014F08D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66D34FC120C491860014F08D /* Logger */;
+			targetProxy = 66D34FED20C49A510014F08D /* PBXContainerItemProxy */;
+		};
+		66D34FF020C49A510014F08D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 66D34FCA20C491C70014F08D /* MudBathEngine */;
+			targetProxy = 66D34FEF20C49A510014F08D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		660659E620A91E3800E5579D /* Debug */ = {
@@ -586,6 +739,56 @@
 			};
 			name = Release;
 		};
+		66D34FC420C491870014F08D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		66D34FC520C491870014F08D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		66D34FCD20C491C70014F08D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/deps/GLFW",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		66D34FCE20C491C70014F08D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/deps/GLFW",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		66EB664A20C359EC0048B3AA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -659,39 +862,6 @@
 			};
 			name = Release;
 		};
-		66EB66A620C458290048B3AA /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				HEADER_SEARCH_PATHS = "$(SRCROOT)";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/deps/GLFW",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Debug;
-		};
-		66EB66A720C458290048B3AA /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				EXECUTABLE_PREFIX = lib;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/deps/GLFW",
-				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -709,6 +879,24 @@
 			buildConfigurations = (
 				66CB066920A91DA1003973D1 /* Debug */,
 				66CB066A20A91DA1003973D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66D34FC320C491870014F08D /* Build configuration list for PBXNativeTarget "Logger" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66D34FC420C491870014F08D /* Debug */,
+				66D34FC520C491870014F08D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		66D34FCC20C491C70014F08D /* Build configuration list for PBXNativeTarget "MudBathEngine" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				66D34FCD20C491C70014F08D /* Debug */,
+				66D34FCE20C491C70014F08D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -736,15 +924,6 @@
 			buildConfigurations = (
 				66EB669720C456340048B3AA /* Debug */,
 				66EB669820C456340048B3AA /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		66EB66A520C458290048B3AA /* Build configuration list for PBXNativeTarget "MudBathEngine" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				66EB66A620C458290048B3AA /* Debug */,
-				66EB66A720C458290048B3AA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

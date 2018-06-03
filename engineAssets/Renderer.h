@@ -15,17 +15,25 @@
 
 #include <iostream>
 
+#ifndef Logger_h
+    #include "Logging/Logger.h"
+#endif
+
 class Renderer
 {
 private:
     int state;
+    Logger* renLogger;
+    
 public:
     Renderer()
-    :state(-1){
-        std::cout << "Renderer Constructor" << std::endl;
+    :state(-1), renLogger(0){
+        if(renLogger == NULL)
+            renLogger = new Logger("REN");
+        renLogger->log("Renderer Constructor");
     }
     ~Renderer()
     {
-        std::cout << "Renderer Destructor" << std::endl;
+        renLogger->log("Renderer Destructor");
     }
 };
