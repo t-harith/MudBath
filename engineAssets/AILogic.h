@@ -24,9 +24,11 @@ private:
     
 public:
     AILogic()
-    :state(-1), aiLogger(0){
+    :state(-1), aiLogger(0)
+    {
+        std::string outputLogFile = "MBE_aiLogic_log";
         if(aiLogger == NULL)
-            aiLogger = new Logger("AI");
+            aiLogger = new Logger("AI", outputLogFile);
         aiLogger->log("AILogic Constructor");
     }
     ~AILogic()

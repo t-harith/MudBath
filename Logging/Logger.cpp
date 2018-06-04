@@ -10,15 +10,11 @@
 #include <iostream>
 #include "Logger.h"
 
-Logger::Logger(std::string p)
-:outputStream(std::cout), prefix(p)
-{
-    std::cout << "Default " + prefix + "-Logger Constructor" << std::endl;
-}
 
-Logger::Logger(std::ostream & os, std::string p)
-:outputStream(os), prefix(p)
+Logger::Logger( std::string p, std::string outputFname )
 {
+    prefix = p;
+    outputStream.open(outputFname.c_str());
     std::cout << "Custom " + prefix + "-Logger Constructor" << std::endl;
 }
 

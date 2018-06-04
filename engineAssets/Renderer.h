@@ -14,6 +14,7 @@
 #endif /* Renderer_h */
 
 #include <iostream>
+#include <fstream>
 
 #ifndef Logger_h
     #include "Logging/Logger.h"
@@ -27,9 +28,11 @@ private:
     
 public:
     Renderer()
-    :state(-1), renLogger(0){
+    :state(-1), renLogger(0)
+    {
+        std::string outputLogFile = "MBE_renderer_log";
         if(renLogger == NULL)
-            renLogger = new Logger("REN");
+            renLogger = new Logger("REN", outputLogFile);
         renLogger->log("Renderer Constructor");
     }
     ~Renderer()

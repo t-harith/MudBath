@@ -13,15 +13,16 @@
 #endif /* Logger_h */
 
 #include <iostream>
+#include <fstream>
 
 class Logger
 {
 private:
-    std::ostream & outputStream;
     std::string prefix;
+    std::ofstream outputStream;
+    
 public:
-    Logger(std::string p);
-    Logger(std::ostream & os, std::string p);
+    Logger( std::string p, std::string outputFname );
     ~Logger();
     
     void log(const std::string logMsg);

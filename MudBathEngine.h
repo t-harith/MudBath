@@ -25,11 +25,19 @@
 
 enum EngineState
 {
-    FAULT = -1,
-    INIT = 0,
+    FAULTED = -1,
+    IDLE = 0,
     ACTIVE = 1,
-    PAUSE = 2,
-    HALTED = 3
+    PAUSED = 2,
+    ABORTED = 3
+};
+
+enum EngineCommand
+{
+    START = 0,
+    PAUSE = 1,
+    EXIT = 2,
+    RESTART = 3,
 };
 
 enum Profile
@@ -40,9 +48,26 @@ enum Profile
 
 class MBEngine
 {
+    struct engineWindow
+    {
+        GLFWwindow* window;
+        
+        int version_maj;
+        int version_min;
+        unsigned int profile;
+        bool forward_compat;
+        std::string name;
+        int width;
+        int height;
+        bool full_screen;
+        GLFWwindow* share;
+        int close_key;
+    };
 private:
-    EngineState state;
-    GLFWwindow* window;
+    EngineState mbeState;
+    EngineCommand mbeCommand;
+    
+    engineWindow* windowManager;
     
     Renderer* basicRend;
     PhysicsModule* basicPhys;
@@ -50,19 +75,23 @@ private:
     
     Logger* mbLogger;
     
-    void loadSubsystems();
-    void clearSubsystems();
+    void readConfig(std::string configFname);
     
-public:
-    MBEngine(/* config options  */
-             /* output filename */);
-    ~MBEngine();
-    void init();
+    void loadSubsystems(std::string outputFname);
+    void clearSubsystems();
+    void subsystemsInit();
+    void subsystemsTerminate();
     
     /* Window Setup Funcs */
     void windowInit(int version_maj, int version_min, unsigned int profile, bool forward_compat);
-    static void key_callback(GLFWwindow* window, int key, int scanncode, int action, int mods);
+    static void window_close_callback(GLFWwindow* window, int key, int scanncode, int action, int mods);
     void setWindowParams(std::string name, int width, int height, bool full_screen, GLFWwindow* share);
+    
+public:
+    MBEngine(std::string configFname,
+             std::string outputFname);
+    ~MBEngine();
+    void init();
     
 };
 

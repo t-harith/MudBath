@@ -26,9 +26,11 @@ private:
     
 public:
     PhysicsModule()
-    :state(-1), pmLogger(0){
+    :state(-1), pmLogger(0)
+    {
+        std::string outputLogFile = "MBE_physicsModule_log";
         if(pmLogger == NULL)
-            pmLogger = new Logger("PM");
+            pmLogger = new Logger("PM", outputLogFile);
         pmLogger->log("PhysicsModule Constructor");
     }
     ~PhysicsModule()
