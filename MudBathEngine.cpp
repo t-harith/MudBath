@@ -204,7 +204,7 @@ void MBEngine::readConfig(std::string configFname)
     windowManager->version_min = 3; //stoi(verMin);
     windowManager->profile = Profile::CORE; //stoi(prof);
     windowManager->forward_compat = true ;//(fc == "true") ? true : false;
-    windowManager->name = "Riverbank 2dsb" ;//n;
+    windowManager->name = "Riverbank 2D Sandbox" ;//n;
     windowManager->width = 640; //stoi(w);
     windowManager->height = 480; //stoi(h);
     windowManager->full_screen = false; //(fs == "true") ? true : false;

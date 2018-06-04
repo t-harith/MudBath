@@ -122,6 +122,7 @@
 		66D34FC220C491860014F08D /* libLogger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLogger.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D34FCB20C491C70014F08D /* libMudBathEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMudBathEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D3500020C4CD6F0014F08D /* configFile.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = configFile.txt; sourceTree = "<group>"; };
+		66D3500220C4DC2A0014F08D /* riverbankLog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = riverbankLog.txt; sourceTree = "<group>"; };
 		66EB664C20C359EC0048B3AA /* Centrifudge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Centrifudge; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EB665D20C35C010048B3AA /* Marshland */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Marshland; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EB666020C44E2B0048B3AA /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
@@ -239,6 +240,7 @@
 			children = (
 				66EB667B20C4515D0048B3AA /* MudBathEngine.cpp */,
 				66EB667C20C4515E0048B3AA /* MudBathEngine.h */,
+				66D3500120C4DBE40014F08D /* logs */,
 				66D34FFF20C4CD6F0014F08D /* config */,
 				66EB667720C4513F0048B3AA /* testFrameworks */,
 				66EB665F20C44DDC0048B3AA /* Logging */,
@@ -268,6 +270,14 @@
 				66D3500020C4CD6F0014F08D /* configFile.txt */,
 			);
 			path = config;
+			sourceTree = SOURCE_ROOT;
+		};
+		66D3500120C4DBE40014F08D /* logs */ = {
+			isa = PBXGroup;
+			children = (
+				66D3500220C4DC2A0014F08D /* riverbankLog.txt */,
+			);
+			path = logs;
 			sourceTree = SOURCE_ROOT;
 		};
 		66EB665F20C44DDC0048B3AA /* Logging */ = {
