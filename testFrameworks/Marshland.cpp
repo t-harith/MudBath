@@ -15,7 +15,6 @@ MarshlandStates mlState = Menu;
 int main()
 {
     std::string outputLogFile = "/Users/dev/OpenGL/MudBath/MudBath/logs/marshlandLog.txt";
-    std::ofstream test(outputLogFile.c_str());
     Logger* mlLogger = new Logger("ML", outputLogFile);
     
     mlLogger->log("Initializing Marshland Test Environment");

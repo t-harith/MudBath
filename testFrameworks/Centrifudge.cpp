@@ -15,7 +15,6 @@ CentrifudgeStates cfState = Animated;
 int main()
 {
     std::string outputLogFile = "/Users/dev/OpenGL/MudBath/MudBath/logs/centrifudgeLog.txt";
-    std::ofstream test(outputLogFile.c_str());
     Logger* cfLogger = new Logger("CF", outputLogFile);
     
     cfLogger->log("Initializing Centrifudge Test Environment");
