@@ -123,6 +123,8 @@
 		66D34FCB20C491C70014F08D /* libMudBathEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMudBathEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D3500020C4CD6F0014F08D /* configFile.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = configFile.txt; sourceTree = "<group>"; };
 		66D3500220C4DC2A0014F08D /* riverbankLog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = riverbankLog.txt; sourceTree = "<group>"; };
+		66D3500320C4DD240014F08D /* centrifudgeLog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = centrifudgeLog.txt; sourceTree = "<group>"; };
+		66D3500420C4DD240014F08D /* marshlandLog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = marshlandLog.txt; sourceTree = "<group>"; };
 		66EB664C20C359EC0048B3AA /* Centrifudge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Centrifudge; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EB665D20C35C010048B3AA /* Marshland */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Marshland; sourceTree = BUILT_PRODUCTS_DIR; };
 		66EB666020C44E2B0048B3AA /* Logger.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Logger.h; sourceTree = "<group>"; };
@@ -275,6 +277,8 @@
 		66D3500120C4DBE40014F08D /* logs */ = {
 			isa = PBXGroup;
 			children = (
+				66D3500320C4DD240014F08D /* centrifudgeLog.txt */,
+				66D3500420C4DD240014F08D /* marshlandLog.txt */,
 				66D3500220C4DC2A0014F08D /* riverbankLog.txt */,
 			);
 			path = logs;
