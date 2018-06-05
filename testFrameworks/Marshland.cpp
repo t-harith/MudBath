@@ -20,7 +20,7 @@ int main()
     mlLogger->log("Initializing Marshland Test Environment");
     
     // Create Engine Object
-    MBEngine* engine = new MBEngine("/Users/dev/OpenGL/MudBath/MudBath/config/configFile.txt", "outputFile.txt");
+    MBEngine* engine = new MBEngine("/Users/dev/OpenGL/MudBath/MudBath/config/defaultConfig.txt", "outputFile.txt");
     
     engine->init();
     

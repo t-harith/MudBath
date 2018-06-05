@@ -9,6 +9,7 @@
 #include <iostream>
 #include <fstream>
 #include "MudBathEngine.h"
+#include "ConfigReader/ConfigFile.hpp"
 
 #define ASSERT(x) if(!x) { __asm__("int $3"); }
 
@@ -184,7 +185,45 @@ void MBEngine::setWindowParams(std::string name, int width, int height, bool ful
 
 void MBEngine::readConfig(std::string configFname)
 {
-    std::ifstream configStream(configFname.c_str());
+    
+    ConfigFile cf(configFname.c_str());
+    
+    windowManager->version_maj = 3;
+    windowManager->version_min = 3;
+    windowManager->profile = Profile::CORE;
+    windowManager->forward_compat = true ;
+    windowManager->name = "Riverbank 2D Sandbox" ;
+    windowManager->width = 640;
+    windowManager->height = 480;
+    windowManager->full_screen = false;
+    windowManager->share = NULL;
+    windowManager->close_key = GLFW_KEY_ESCAPE;
+    
+    windowManager->version_maj   = cf.Value("window_params","Version_Major"  );
+    windowManager->version_min = cf.Value("window_params","Version_Minor");
+    
+    if((std::string)cf.Value("window_params","Profile" ) == "CORE")
+    {
+        windowManager->profile  = Profile::CORE;
+    }
+    else if((std::string)cf.Value("window_params","Profile" ) == "COMPAT")
+    {
+        windowManager->profile  = Profile::COMPAT;
+    }
+    else
+    {
+        ASSERT(0);
+    }
+    
+    windowManager->forward_compat = cf.Value("window_params","Forward_Compat" );
+    windowManager->name = (std::string)cf.Value("window_params","Name" );
+    windowManager->width = cf.Value("window_params","Width" );
+    windowManager->height = cf.Value("window_params","Height" );
+    windowManager->full_screen = cf.Value("window_params","Full_Screen" );
+    windowManager->share = NULL;
+    windowManager->close_key = cf.Value("window_params","Close_Key" );
+
+/*    std::ifstream configStream(configFname.c_str());
     if(configStream.fail())
         throw configFileReadError();
     
@@ -210,7 +249,7 @@ void MBEngine::readConfig(std::string configFname)
     windowManager->full_screen = false; //(fs == "true") ? true : false;
     windowManager->share = NULL;
     windowManager->close_key = GLFW_KEY_ESCAPE;
-    
+*/
 }
 
 void MBEngine::loadSubsystems(std::string outputFname)

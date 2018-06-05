@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6672E39720C6392F00ADACDA /* config_reader_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6672E38220C637EE00ADACDA /* config_reader_test.cpp */; };
+		6672E3A020C6578400ADACDA /* Chameleon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6672E37920C5BD7800ADACDA /* Chameleon.cpp */; };
+		6672E3A120C6578400ADACDA /* ConfigFile.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6672E37E20C5BE0700ADACDA /* ConfigFile.cpp */; };
+		6672E3A220C6579700ADACDA /* libConfigFileReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6672E39C20C6577800ADACDA /* libConfigFileReader.a */; };
 		66D34FC620C4918D0014F08D /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66D34FBD20C490950014F08D /* Logger.cpp */; };
 		66D34FD220C491E20014F08D /* libglad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EB669520C456340048B3AA /* libglad.a */; };
 		66D34FD320C491E50014F08D /* libLogger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D34FC220C491860014F08D /* libLogger.a */; };
@@ -88,6 +92,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		6672E39020C638A900ADACDA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		66EB664820C359EC0048B3AA /* Copy Files */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -118,10 +131,17 @@
 		660659EE20A94B2200E5579D /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
 		660659F020A94B2700E5579D /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		660659F220A94B6300E5579D /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		6672E37920C5BD7800ADACDA /* Chameleon.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Chameleon.cpp; sourceTree = "<group>"; };
+		6672E37D20C5BDC200ADACDA /* Chameleon.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Chameleon.hpp; sourceTree = "<group>"; };
+		6672E37E20C5BE0700ADACDA /* ConfigFile.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ConfigFile.cpp; sourceTree = "<group>"; };
+		6672E37F20C5BE0700ADACDA /* ConfigFile.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ConfigFile.hpp; sourceTree = "<group>"; };
+		6672E38220C637EE00ADACDA /* config_reader_test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = config_reader_test.cpp; sourceTree = "<group>"; };
+		6672E39420C638A900ADACDA /* config_reader_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = config_reader_test; sourceTree = BUILT_PRODUCTS_DIR; };
+		6672E39C20C6577800ADACDA /* libConfigFileReader.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libConfigFileReader.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D34FBD20C490950014F08D /* Logger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Logger.cpp; sourceTree = "<group>"; };
 		66D34FC220C491860014F08D /* libLogger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLogger.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D34FCB20C491C70014F08D /* libMudBathEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMudBathEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		66D3500020C4CD6F0014F08D /* configFile.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = configFile.txt; sourceTree = "<group>"; };
+		66D3500020C4CD6F0014F08D /* defaultConfig.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = defaultConfig.txt; sourceTree = "<group>"; };
 		66D3500220C4DC2A0014F08D /* riverbankLog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = riverbankLog.txt; sourceTree = "<group>"; };
 		66D3500320C4DD240014F08D /* centrifudgeLog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = centrifudgeLog.txt; sourceTree = "<group>"; };
 		66D3500420C4DD240014F08D /* marshlandLog.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = marshlandLog.txt; sourceTree = "<group>"; };
@@ -165,6 +185,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6672E38A20C638A900ADACDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6672E39920C6577800ADACDA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66D34FBF20C491860014F08D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -179,6 +213,7 @@
 				66D34FD520C491FD0014F08D /* libglfw3.a in Frameworks */,
 				66D34FD220C491E20014F08D /* libglad.a in Frameworks */,
 				66D34FD320C491E50014F08D /* libLogger.a in Frameworks */,
+				6672E3A220C6579700ADACDA /* libConfigFileReader.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,9 +272,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		6672E37B20C5BDC200ADACDA /* ConfigReader */ = {
+			isa = PBXGroup;
+			children = (
+				6672E37920C5BD7800ADACDA /* Chameleon.cpp */,
+				6672E37D20C5BDC200ADACDA /* Chameleon.hpp */,
+				6672E37E20C5BE0700ADACDA /* ConfigFile.cpp */,
+				6672E37F20C5BE0700ADACDA /* ConfigFile.hpp */,
+			);
+			path = ConfigReader;
+			sourceTree = "<group>";
+		};
+		6672E38120C637B700ADACDA /* unitTests */ = {
+			isa = PBXGroup;
+			children = (
+				6672E38220C637EE00ADACDA /* config_reader_test.cpp */,
+			);
+			path = unitTests;
+			sourceTree = "<group>";
+		};
 		66CB065B20A91DA1003973D1 = {
 			isa = PBXGroup;
 			children = (
+				6672E38120C637B700ADACDA /* unitTests */,
+				6672E37B20C5BDC200ADACDA /* ConfigReader */,
 				66EB667B20C4515D0048B3AA /* MudBathEngine.cpp */,
 				66EB667C20C4515E0048B3AA /* MudBathEngine.h */,
 				66D3500120C4DBE40014F08D /* logs */,
@@ -262,6 +318,8 @@
 				66EB669520C456340048B3AA /* libglad.a */,
 				66D34FC220C491860014F08D /* libLogger.a */,
 				66D34FCB20C491C70014F08D /* libMudBathEngine.a */,
+				6672E39420C638A900ADACDA /* config_reader_test */,
+				6672E39C20C6577800ADACDA /* libConfigFileReader.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -269,7 +327,7 @@
 		66D34FFF20C4CD6F0014F08D /* config */ = {
 			isa = PBXGroup;
 			children = (
-				66D3500020C4CD6F0014F08D /* configFile.txt */,
+				66D3500020C4CD6F0014F08D /* defaultConfig.txt */,
 			);
 			path = config;
 			sourceTree = SOURCE_ROOT;
@@ -369,6 +427,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		6672E39A20C6577800ADACDA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		66D34FC020C491860014F08D /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -411,6 +476,40 @@
 			productName = MudBath;
 			productReference = 660659E820A91E3800E5579D /* Riverbank */;
 			productType = "com.apple.product-type.tool";
+		};
+		6672E38320C638A900ADACDA /* config_reader_test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6672E39120C638A900ADACDA /* Build configuration list for PBXNativeTarget "config_reader_test" */;
+			buildPhases = (
+				6672E38820C638A900ADACDA /* Sources */,
+				6672E38A20C638A900ADACDA /* Frameworks */,
+				6672E39020C638A900ADACDA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = config_reader_test;
+			productName = MudBath;
+			productReference = 6672E39420C638A900ADACDA /* config_reader_test */;
+			productType = "com.apple.product-type.tool";
+		};
+		6672E39B20C6577800ADACDA /* ConfigFileReader */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6672E39D20C6577800ADACDA /* Build configuration list for PBXNativeTarget "ConfigFileReader" */;
+			buildPhases = (
+				6672E39820C6577800ADACDA /* Sources */,
+				6672E39920C6577800ADACDA /* Frameworks */,
+				6672E39A20C6577800ADACDA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ConfigFileReader;
+			productName = ConfigFileReader;
+			productReference = 6672E39C20C6577800ADACDA /* libConfigFileReader.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 		66D34FC120C491860014F08D /* Logger */ = {
 			isa = PBXNativeTarget;
@@ -510,6 +609,9 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Tejas Harith";
 				TargetAttributes = {
+					6672E39B20C6577800ADACDA = {
+						CreatedOnToolsVersion = 9.3.1;
+					};
 					66D34FC120C491860014F08D = {
 						CreatedOnToolsVersion = 9.3.1;
 					};
@@ -539,6 +641,8 @@
 				66EB669420C456340048B3AA /* glad */,
 				66D34FC120C491860014F08D /* Logger */,
 				66D34FCA20C491C70014F08D /* MudBathEngine */,
+				6672E38320C638A900ADACDA /* config_reader_test */,
+				6672E39B20C6577800ADACDA /* ConfigFileReader */,
 			);
 		};
 /* End PBXProject section */
@@ -549,6 +653,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				66EB668120C451AE0048B3AA /* Riverbank.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6672E38820C638A900ADACDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6672E39720C6392F00ADACDA /* config_reader_test.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6672E39820C6577800ADACDA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6672E3A020C6578400ADACDA /* Chameleon.cpp in Sources */,
+				6672E3A120C6578400ADACDA /* ConfigFile.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,6 +772,55 @@
 					"$(PROJECT_DIR)/deps/GLFW",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6672E39220C638A900ADACDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"$(SRCROOT)",
+					"$(SRCROOT)/ConfigReader",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/deps/GLFW",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		6672E39320C638A900ADACDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = "$(SRCROOT)";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/deps/GLFW",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		6672E39E20C6577800ADACDA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6672E39F20C6577800ADACDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				EXECUTABLE_PREFIX = lib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
 			};
 			name = Release;
 		};
@@ -894,6 +1064,24 @@
 			buildConfigurations = (
 				660659E620A91E3800E5579D /* Debug */,
 				660659E720A91E3800E5579D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6672E39120C638A900ADACDA /* Build configuration list for PBXNativeTarget "config_reader_test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6672E39220C638A900ADACDA /* Debug */,
+				6672E39320C638A900ADACDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6672E39D20C6577800ADACDA /* Build configuration list for PBXNativeTarget "ConfigFileReader" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6672E39E20C6577800ADACDA /* Debug */,
+				6672E39F20C6577800ADACDA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -20,7 +20,7 @@ int main()
     cfLogger->log("Initializing Centrifudge Test Environment");
     
     // Create Engine Object
-    MBEngine* engine = new MBEngine("/Users/dev/OpenGL/MudBath/MudBath/config/configFile.txt", "outputFile.txt");
+    MBEngine* engine = new MBEngine("/Users/dev/OpenGL/MudBath/MudBath/config/defaultConfig.txt", "outputFile.txt");
     engine->init();
     
     /*   // Load Assets

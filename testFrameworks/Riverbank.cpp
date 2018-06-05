@@ -26,7 +26,7 @@ int main()
     rbLogger->log("Initializing Riverbank Test Environment");
     
     // Create Engine Object
-    MBEngine* engine = new MBEngine("/Users/dev/OpenGL/MudBath/MudBath/config/configFile.txt", "outputFile.txt");
+    MBEngine* engine = new MBEngine("/Users/dev/OpenGL/MudBath/MudBath/config/defaultConfig.txt", "outputFile.txt");
     
     // Open Window
     //engine->windowInit(3, 3, Profile::CORE, true);

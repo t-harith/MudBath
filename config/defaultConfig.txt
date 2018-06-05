@@ -1,0 +1,14 @@
+[window_params]
+	<uint> Version_Major = 3
+	<uint> Version_Minor = 3
+	<Profile> Profile = CORE
+	<bool> Forward_Compat = true
+	<string> Name = Default Sandbox
+	<uint> Width = 640
+	<uint> Height = 480
+	<bool> Full_Screen = false
+	<uint> Close_Key = 256
+[section_2]
+    <sic> sic = sic
+
+
