@@ -52,13 +52,13 @@ class MBEngine
     {
         GLFWwindow* window;
         
-        int version_maj;
-        int version_min;
+        unsigned int version_maj;
+        unsigned int version_min;
         unsigned int profile;
         bool forward_compat;
         std::string name;
-        int width;
-        int height;
+        unsigned int width;
+        unsigned int height;
         bool full_screen;
         GLFWwindow* share;
         int close_key;
