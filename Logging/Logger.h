@@ -21,13 +21,15 @@ private:
     std::string prefix;
     std::ofstream outputStream;
     
+    std::string doubleDig( const int timeVar );
+    
 public:
-    Logger( std::string p, std::string outputFname );
+    Logger(const std::string & p, const std::string & outputFname , bool newLogs);
     ~Logger();
     
-    void log(const std::string logMsg);
+    void log(const std::string & logMsg);
     
-    void warn(const std::string warningMsg);
+    void warn(const std::string & warningMsg);
     
-    void error(const std::string errorMsg);
+    void error(const std::string & errorMsg);
 };

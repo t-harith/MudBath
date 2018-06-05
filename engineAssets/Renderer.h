@@ -30,9 +30,9 @@ public:
     Renderer()
     :state(-1), renLogger(0)
     {
-        std::string outputLogFile = "MBE_renderer_log";
+        std::string outputLogFile = "engineLogs/MBE_renderer_log";
         if(renLogger == NULL)
-            renLogger = new Logger("REN", outputLogFile);
+            renLogger = new Logger("REN", outputLogFile, false);
         renLogger->log("Renderer Constructor");
     }
     ~Renderer()

@@ -19,14 +19,14 @@ RiverbankStates rbState = Menu;
 
 int main()
 {
-    std::string outputLogFile = "/Users/dev/OpenGL/MudBath/MudBath/logs/riverbankLog.txt";
+    std::string outputLogFile = "execLogs/_riverbankLog.txt";
     std::ofstream test(outputLogFile.c_str());
-    Logger* rbLogger = new Logger("RB", outputLogFile);
+    Logger* rbLogger = new Logger("RB", outputLogFile, false);
     
     rbLogger->log("Initializing Riverbank Test Environment");
     
     // Create Engine Object
-    MBEngine* engine = new MBEngine("/Users/dev/OpenGL/MudBath/MudBath/config/defaultConfig.txt", "outputFile.txt");
+    MBEngine* engine = new MBEngine("config/defaultConfig.txt", "_engineLog.txt");
     
     // Open Window
     //engine->windowInit(3, 3, Profile::CORE, true);

@@ -26,9 +26,9 @@ public:
     AILogic()
     :state(-1), aiLogger(0)
     {
-        std::string outputLogFile = "MBE_aiLogic_log";
+        std::string outputLogFile = "engineLogs/MBE_aiLogic_log";
         if(aiLogger == NULL)
-            aiLogger = new Logger("AI", outputLogFile);
+            aiLogger = new Logger("AI", outputLogFile, false);
         aiLogger->log("AILogic Constructor");
     }
     ~AILogic()

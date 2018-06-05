@@ -14,13 +14,13 @@ CentrifudgeStates cfState = Animated;
 
 int main()
 {
-    std::string outputLogFile = "/Users/dev/OpenGL/MudBath/MudBath/logs/centrifudgeLog.txt";
-    Logger* cfLogger = new Logger("CF", outputLogFile);
+    std::string outputLogFile = "execLogs/_centrifudgeLog.txt";
+    Logger* cfLogger = new Logger("CF", outputLogFile, false);
     
     cfLogger->log("Initializing Centrifudge Test Environment");
     
     // Create Engine Object
-    MBEngine* engine = new MBEngine("/Users/dev/OpenGL/MudBath/MudBath/config/defaultConfig.txt", "outputFile.txt");
+    MBEngine* engine = new MBEngine("config/defaultConfig.txt", "_engineLog.txt");
     engine->init();
     
     /*   // Load Assets

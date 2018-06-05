@@ -255,8 +255,9 @@ void MBEngine::readConfig(std::string configFname)
 void MBEngine::loadSubsystems(std::string outputFname)
 {
     
+    std::string engineLogLoc = "engineLogs/" + outputFname;
     if(mbLogger == NULL){
-        mbLogger = new Logger("MBE", outputFname);
+        mbLogger = new Logger("MBE", engineLogLoc, false);
     }
     if(basicRend == NULL){
         basicRend = new Renderer();

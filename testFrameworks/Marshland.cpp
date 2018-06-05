@@ -14,13 +14,13 @@ MarshlandStates mlState = Menu;
 
 int main()
 {
-    std::string outputLogFile = "/Users/dev/OpenGL/MudBath/MudBath/logs/marshlandLog.txt";
-    Logger* mlLogger = new Logger("ML", outputLogFile);
+    std::string outputLogFile = "execLogs/_marshlandLog.txt";
+    Logger* mlLogger = new Logger("ML", outputLogFile, false);
     
     mlLogger->log("Initializing Marshland Test Environment");
     
     // Create Engine Object
-    MBEngine* engine = new MBEngine("/Users/dev/OpenGL/MudBath/MudBath/config/defaultConfig.txt", "outputFile.txt");
+    MBEngine* engine = new MBEngine("config/defaultConfig.txt", "_engineLog.txt");
     
     engine->init();
     

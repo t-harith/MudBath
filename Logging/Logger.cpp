@@ -8,32 +8,63 @@
 
 #include <stdio.h>
 #include <iostream>
+#include <sstream>
+#include <ctime>
 #include "Logger.h"
 
 
-Logger::Logger( std::string p, std::string outputFname )
+Logger::Logger(const std::string & p, const std::string & outputFname, bool newLogs)
 {
+    std::size_t found = outputFname.find_last_of("/\\");
+    std::string path = outputFname.substr(0,found);
+    std::string file = outputFname.substr(found+1);
+    
     prefix = p;
-    outputStream.open(outputFname.c_str());
-    std::cout << "Custom " + prefix + "-Logger Constructor" << std::endl;
+    
+    std::stringstream s;
+    s << path << "/";
+    
+    if(newLogs)
+    {
+        std::time_t t = std::time(nullptr);
+        std::tm * tim = std::localtime(&t);
+        
+        s << tim->tm_mon << "-" << tim->tm_mday << "-" << tim->tm_year+1900 << "_";
+        s << doubleDig(tim->tm_hour) << "\ua789" << doubleDig(tim->tm_min) << "\ua789" << doubleDig(tim->tm_sec) << "_";
+    }
+    
+    s << file;
+    outputStream.open(s.str());
 }
 
 Logger::~Logger()
 {
-    std::cout << prefix + "-Logger Destructor" << std::endl;
+//    std::cout << prefix << "-Logger Destructor" << std::endl;
 }
 
-void Logger::log(const std::string logMsg)
+void Logger::log(const std::string & logMsg)
 {
-    outputStream << prefix + "-LOG: " + logMsg + "\n";
+    outputStream << prefix << "-LOG: " << logMsg << "\n";
+    outputStream.flush();
 }
 
-void Logger::warn(const std::string warningMsg)
+void Logger::warn(const std::string & warningMsg)
 {
-    outputStream << prefix + "-WARNING: " + warningMsg + "\n";
+    outputStream << prefix << "-WARN: " << warningMsg << "\n";
+    outputStream.flush();
 }
 
-void Logger::error(const std::string errorMsg)
+void Logger::error(const std::string & errorMsg)
 {
-    outputStream << prefix + "-ERROR: " + errorMsg + "\n";
+    outputStream << prefix << "-ERROR: " << errorMsg + "\n";
+    outputStream.flush();
+}
+
+std::string Logger::doubleDig(const int timeVar)
+{
+    std::string returnStr;
+    (timeVar < 10) ?
+        returnStr = "0" + std::to_string(timeVar) :
+        returnStr = std::to_string(timeVar);
+    return returnStr;
 }

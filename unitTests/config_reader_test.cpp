@@ -13,7 +13,7 @@
 
 int main()
 {
-    std::string configFname = "/Users/dev/OpenGL/MudBath/MudBath/config/defaultConfig.txt";
+    std::string configFname = "testConfig/testDefaultConfig.txt";
     ConfigFile cf(configFname.c_str());
     
     std::cout << (unsigned int)cf.Value("window_params","Version_Major" ) << std::endl;
