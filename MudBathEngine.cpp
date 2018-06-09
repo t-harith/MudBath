@@ -38,6 +38,23 @@ public:
     std::string errMsg = "Error in reading config file";
 };
 
+/* State Management */
+void MBEngine::MoveToState(EngineState e)
+{
+    if(mbeState == e)
+    {
+        mbLogger->log("No state change registered. Current State: " + std::to_string(e));
+        return;
+    }
+    mbLogger->log("Moving to state: " + std::to_string(e) + " from state: " + std::to_string(mbeState));
+    MBEngine::mbeState = e;
+};
+
+void MBEngine::SendCMD(EngineCommand c)
+{
+    MBEngine::mbeCommand = c;
+}
+
 ///////////////////////
 /*    Public Funcs   */
 ///////////////////////
@@ -60,8 +77,6 @@ MBEngine::~MBEngine()
     clearSubsystems();
 }
 
-
-///////////////////////
 
 ///////////////////////
 /*    MAIN LOOP      */
@@ -89,7 +104,7 @@ void MBEngine::init()
     
     
     
-    // GAME LOOP
+    // MAIN LOOP
     int exit = 0;
     while(!exit){
         
@@ -100,8 +115,8 @@ void MBEngine::init()
                 if(glfwWindowShouldClose(windowManager->window))
                 {
                     // implemented command on value changed
-                    mbeCommand = EngineCommand::EXIT;
-                    mbeState = EngineState::ABORTED;
+                    SendCMD(EngineCommand::EXIT);
+                    MoveToState(EngineState::ABORTED);
                     break;
                 }
                 
@@ -111,6 +126,7 @@ void MBEngine::init()
                 
                 /* Swap front and back buffers */
                 glfwSwapBuffers(windowManager->window);
+                
                 break;
             case PAUSED:
                 break;
@@ -223,33 +239,6 @@ void MBEngine::readConfig(std::string configFname)
     windowManager->share = NULL;
     windowManager->close_key = cf.Value("window_params","Close_Key" );
 
-/*    std::ifstream configStream(configFname.c_str());
-    if(configStream.fail())
-        throw configFileReadError();
-    
-    std::string verMaj, verMin, prof, fc, n, w, h, fs, sh, ck;
-    configStream >> verMaj;
-    configStream >> verMin;
-    configStream >> prof;
-    configStream >> fc;
-    configStream >> n;
-    configStream >> w;
-    configStream >> h;
-    configStream >> fs;
-    configStream >> sh;
-    configStream >> ck;
-    
-    windowManager->version_maj = 3; //stoi(verMaj);
-    windowManager->version_min = 3; //stoi(verMin);
-    windowManager->profile = Profile::CORE; //stoi(prof);
-    windowManager->forward_compat = true ;//(fc == "true") ? true : false;
-    windowManager->name = "Riverbank 2D Sandbox" ;//n;
-    windowManager->width = 640; //stoi(w);
-    windowManager->height = 480; //stoi(h);
-    windowManager->full_screen = false; //(fs == "true") ? true : false;
-    windowManager->share = NULL;
-    windowManager->close_key = GLFW_KEY_ESCAPE;
-*/
 }
 
 void MBEngine::loadSubsystems(std::string outputFname)
@@ -312,18 +301,3 @@ void MBEngine::subsystemsTerminate()
 ///////////////////////
 
 
-/*
- 
- switch (mbeCommand)
- {
- case START:
- break;
- case PAUSE:
- break;
- case EXIT:
- break;
- case RESTART:
- break;
- }
- 
- */

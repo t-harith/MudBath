@@ -25,11 +25,11 @@
 
 enum EngineState
 {
-    FAULTED = -1,
     IDLE = 0,
     ACTIVE = 1,
     PAUSED = 2,
-    ABORTED = 3
+    ABORTED = 3,
+    FAULTED = 4
 };
 
 enum EngineCommand
@@ -48,6 +48,7 @@ enum Profile
 
 class MBEngine
 {
+public:
     struct engineWindow
     {
         GLFWwindow* window;
@@ -63,6 +64,7 @@ class MBEngine
         GLFWwindow* share;
         int close_key;
     };
+
 private:
     EngineState mbeState;
     EngineCommand mbeCommand;
@@ -75,8 +77,18 @@ private:
     
     Logger* mbLogger;
     
-    void readConfig(std::string configFname);
+public:
+    MBEngine(std::string configFname,
+             std::string outputFname);
+    ~MBEngine();
+    void init();
     
+private:
+    /* State Management Funcs */
+    void MoveToState(EngineState e);
+    void SendCMD(EngineCommand c);
+    
+    /* Subsystems Management Funcs */
     void loadSubsystems(std::string outputFname);
     void clearSubsystems();
     void subsystemsInit();
@@ -87,11 +99,8 @@ private:
     static void window_close_callback(GLFWwindow* window, int key, int scanncode, int action, int mods);
     void setWindowParams(std::string name, int width, int height, bool full_screen, GLFWwindow* share);
     
-public:
-    MBEngine(std::string configFname,
-             std::string outputFname);
-    ~MBEngine();
-    void init();
+    /* General Helpers */
+    void readConfig(std::string configFname);
     
 };
 
