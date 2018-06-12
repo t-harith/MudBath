@@ -12,8 +12,8 @@
 
 #endif /* mudBathEngine_h */
 
-#include "deps/glad/glad.h"
-#include "deps/GLFW/glfw3.h"
+//#include "deps/glad/glad.h"
+//#include "deps/GLFW/glfw3.h"
 
 #include "engineAssets/Renderer.h"
 #include "engineAssets/PhysicsModule.h"
@@ -86,6 +86,8 @@ private:
     void windowInit(int version_maj, int version_min, unsigned int profile, bool forward_compat);
     static void window_close_callback(GLFWwindow* window, int key, int scanncode, int action, int mods);
     void setWindowParams(std::string name, int width, int height, bool full_screen, GLFWwindow* share);
+    
+    void loadAssets();
     
 public:
     MBEngine(std::string configFname,

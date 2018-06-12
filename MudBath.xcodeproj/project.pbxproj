@@ -14,6 +14,7 @@
 		6672E3AE20C6E10E00ADACDA /* logger_test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6672E3A420C6E0C000ADACDA /* logger_test.cpp */; };
 		6672E3AF20C6E11200ADACDA /* libLogger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D34FC220C491860014F08D /* libLogger.a */; };
 		6672E3BD20C7010A00ADACDA /* libConfigFileReader.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6672E39C20C6577800ADACDA /* libConfigFileReader.a */; };
+		667C4EC520CE0C60009C6270 /* Renderer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 667C4EC420CE0C60009C6270 /* Renderer.cpp */; };
 		66D34FC620C4918D0014F08D /* Logger.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 66D34FBD20C490950014F08D /* Logger.cpp */; };
 		66D34FD220C491E20014F08D /* libglad.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66EB669520C456340048B3AA /* libglad.a */; };
 		66D34FD320C491E50014F08D /* libLogger.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 66D34FC220C491860014F08D /* libLogger.a */; };
@@ -179,6 +180,13 @@
 		6672E3C720C7017600ADACDA /* 5-5-2018_10꞉1꞉11_test_log_output.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "5-5-2018_10꞉1꞉11_test_log_output.txt"; sourceTree = "<group>"; };
 		6672E3C820C7017600ADACDA /* 5-5-2018_10꞉23꞉27_ */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "5-5-2018_10꞉23꞉27_"; sourceTree = "<group>"; };
 		6672E3C920C7017600ADACDA /* 5-5-2018_10꞉17꞉51_test_log_output.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "5-5-2018_10꞉17꞉51_test_log_output.txt"; sourceTree = "<group>"; };
+		667C4EC420CE0C60009C6270 /* Renderer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Renderer.cpp; sourceTree = "<group>"; };
+		667C4EC720CE2A92009C6270 /* BaseObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BaseObject.h; sourceTree = "<group>"; };
+		667C4EC820CE2B66009C6270 /* MoveableObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MoveableObject.h; sourceTree = "<group>"; };
+		667C4EC920CE2BAD009C6270 /* RenderableObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RenderableObject.h; sourceTree = "<group>"; };
+		667C4ECC20CF79DA009C6270 /* Material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Material.h; sourceTree = "<group>"; };
+		667C4ECE20CF7A8C009C6270 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
+		667C4ECF20CF7AE6009C6270 /* Texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
 		66D34FBD20C490950014F08D /* Logger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Logger.cpp; sourceTree = "<group>"; };
 		66D34FC220C491860014F08D /* libLogger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLogger.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D34FCB20C491C70014F08D /* libMudBathEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMudBathEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -301,9 +309,12 @@
 		660659DA20A91E1200E5579D /* engineAssets */ = {
 			isa = PBXGroup;
 			children = (
+				667C4ECA20CF79A3009C6270 /* Materials */,
+				667C4EC620CE2A71009C6270 /* Objects */,
 				660659DB20A91E1200E5579D /* Renderer.h */,
 				660659DC20A91E1200E5579D /* PhysicsModule.h */,
 				660659DD20A91E1200E5579D /* AILogic.h */,
+				667C4EC420CE0C60009C6270 /* Renderer.cpp */,
 			);
 			path = engineAssets;
 			sourceTree = "<group>";
@@ -372,6 +383,26 @@
 				6672E3C920C7017600ADACDA /* 5-5-2018_10꞉17꞉51_test_log_output.txt */,
 			);
 			path = testLogs;
+			sourceTree = "<group>";
+		};
+		667C4EC620CE2A71009C6270 /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				667C4EC720CE2A92009C6270 /* BaseObject.h */,
+				667C4EC820CE2B66009C6270 /* MoveableObject.h */,
+				667C4EC920CE2BAD009C6270 /* RenderableObject.h */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		667C4ECA20CF79A3009C6270 /* Materials */ = {
+			isa = PBXGroup;
+			children = (
+				667C4ECC20CF79DA009C6270 /* Material.h */,
+				667C4ECF20CF7AE6009C6270 /* Texture.h */,
+				667C4ECE20CF7A8C009C6270 /* Shader.h */,
+			);
+			path = Materials;
 			sourceTree = "<group>";
 		};
 		66CB065B20A91DA1003973D1 = {
@@ -797,6 +828,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				667C4EC520CE0C60009C6270 /* Renderer.cpp in Sources */,
 				66D34FF120C49B3F0014F08D /* MudBathEngine.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

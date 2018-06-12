@@ -11,7 +11,10 @@
 #include "MudBathEngine.h"
 #include "ConfigReader/ConfigFile.hpp"
 
-#define ASSERT(x) if(!x) { __asm__("int $3"); }
+#ifndef ASSERT_debug
+    #define ASSERT_debug
+    #define ASSERT(x) if(!x) { __asm__("int $3"); }
+#endif
 
 // Errors
 class gladLoadingError
@@ -99,15 +102,15 @@ void MBEngine::init()
             case ACTIVE:
                 if(glfwWindowShouldClose(windowManager->window))
                 {
-                    // implemented command on value changed
+                    // publish event here/ command OVC
                     mbeCommand = EngineCommand::EXIT;
                     mbeState = EngineState::ABORTED;
                     break;
                 }
                 
                 /* Render here */
-                glClear(GL_COLOR_BUFFER_BIT);
-                // basicRend.draw(objectsBuffer);
+                basicRend->prepareBackground(Pixel_POD{0.12f, 0.12f, 0.12f, 1.0f});
+//                basicRend->draw();
                 
                 /* Swap front and back buffers */
                 glfwSwapBuffers(windowManager->window);
@@ -134,6 +137,12 @@ void MBEngine::init()
 ///////////////////////
 /*  Helper Functions */
 ///////////////////////
+// Asset Management
+void MBEngine::loadAssets()
+{
+    // to be impl;
+}
+
 
 // Window Funcs
 // Window Display
@@ -222,34 +231,6 @@ void MBEngine::readConfig(std::string configFname)
     windowManager->full_screen = cf.Value("window_params","Full_Screen" );
     windowManager->share = NULL;
     windowManager->close_key = cf.Value("window_params","Close_Key" );
-
-/*    std::ifstream configStream(configFname.c_str());
-    if(configStream.fail())
-        throw configFileReadError();
-    
-    std::string verMaj, verMin, prof, fc, n, w, h, fs, sh, ck;
-    configStream >> verMaj;
-    configStream >> verMin;
-    configStream >> prof;
-    configStream >> fc;
-    configStream >> n;
-    configStream >> w;
-    configStream >> h;
-    configStream >> fs;
-    configStream >> sh;
-    configStream >> ck;
-    
-    windowManager->version_maj = 3; //stoi(verMaj);
-    windowManager->version_min = 3; //stoi(verMin);
-    windowManager->profile = Profile::CORE; //stoi(prof);
-    windowManager->forward_compat = true ;//(fc == "true") ? true : false;
-    windowManager->name = "Riverbank 2D Sandbox" ;//n;
-    windowManager->width = 640; //stoi(w);
-    windowManager->height = 480; //stoi(h);
-    windowManager->full_screen = false; //(fs == "true") ? true : false;
-    windowManager->share = NULL;
-    windowManager->close_key = GLFW_KEY_ESCAPE;
-*/
 }
 
 void MBEngine::loadSubsystems(std::string outputFname)

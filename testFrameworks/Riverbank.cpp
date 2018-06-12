@@ -28,9 +28,10 @@ int main()
     // Create Engine Object
     MBEngine* engine = new MBEngine("config/defaultConfig.txt", "_engineLog.txt");
     
-    // Open Window
-    //engine->windowInit(3, 3, Profile::CORE, true);
-    //engine->setWindowParams("Riverbank 2D Sandbox", 640, 480, false, NULL);
+    //RenderableObject* riverbank_ro = new RenderableObject();
+    //Material rbTest();
+    //riverbank_ro.addMaterial(rbTest);
+    //engine->loadObjects(renderable_objects_vec);
     
     engine->init();
     
@@ -51,6 +52,7 @@ int main()
             break;
         case Game:
             //DO Something
+            //Game SM
             break;
         case Pause:
             //DO Something
