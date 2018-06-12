@@ -14,6 +14,7 @@
 
 #include <sstream>
 #include <fstream>
+#include <map>
 
 class Shader
 {
@@ -22,28 +23,29 @@ private:
     std::string fragmentSource;
     
 public:
-    unsigned int program_num;
+    unsigned int program_num = 0;
+    std::map<std::string, unsigned int> u_locations;
     
 public:
-    void CreateShader(const std::string& filename)
+    Shader(const std::string& filename)
     {
         ParseShader(filename);
         
         GLint program_ok;
         // Create
-        unsigned int program = glCreateProgram();
+        program_num = glCreateProgram();
         
         // Compile
         unsigned int vs =  CompileShader(GL_VERTEX_SHADER, vertexSource);
         unsigned int fs = CompileShader(GL_FRAGMENT_SHADER, fragmentSource);
         
         // Link
-        glAttachShader(program, vs);
-        glAttachShader(program, fs);
-        glLinkProgram(program);
-        glValidateProgram(program);
+        glAttachShader(program_num, vs);
+        glAttachShader(program_num, fs);
+        glLinkProgram(program_num);
+        glValidateProgram(program_num);
         
-        glGetProgramiv(program, GL_LINK_STATUS, &program_ok);
+        glGetProgramiv(program_num, GL_LINK_STATUS, &program_ok);
         if(program_ok != GL_TRUE){
             std::cout << "ERROR, failed to link shader program" << std::endl;
         }
@@ -52,7 +54,20 @@ public:
         glDeleteShader(vs);
         glDeleteShader(fs);
         
-        program_num = program;
+    }
+    
+    ~Shader()
+    {
+        glDeleteShader(program_num);
+    }
+    
+    void setPropertyValue(const char* property_name, float val1, float val2, float val3, float val4)
+    {
+        // To be templated in the future
+        int location = glGetUniformLocation(program_num, "u_Color");
+        if(location == -1)
+            std::cout << "shader property name: " << property_name << " not found"  << std::endl;
+        glUniform4f(location, val1, val2, val3, val4);
     }
     
 private:

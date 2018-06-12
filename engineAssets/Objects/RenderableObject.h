@@ -20,9 +20,11 @@ class RenderableObject : MoveableObject
 {
 public:
     RenderableObject()
+    :mat(Material("-"))
     {
-        m_renderID = (unsigned int)renderable_objects_list.size()+1;
-        renderable_objects_list.push_back(this);
+        m_renderID = 0;
+        //(unsigned int)renderable_objects_list.size()+1;
+//        renderable_objects_list.push_back(this);
     }
     unsigned int m_renderID;
     static std::vector<RenderableObject*> renderable_objects_list;
@@ -33,43 +35,68 @@ public:
         glBindVertexArray(m_renderID);
         linkVBO();
         linkIBO();
-        linkMaterial();
-        glEnableVertexAttribArray(m_renderID);
+//        linkMaterial();
+        genVAPointer();
+        glEnableVertexAttribArray(0);
+        
+       
+    }
+    void enableShad()
+    {
+         mat.enableShaderPrograms();
     }
     
     unsigned int getIBOsize()
     {
         return size_mesh_indx;
     }
-private:
-    float* mesh_vertx;
-    unsigned int size_mesh_vertx;
-    float* mesh_indx;
-    unsigned int size_mesh_indx;
-    
-    const Material mat;
     
     void addMaterial(const Material & mater)
     {
-//        mat = mater;
+        mat = mater;
     }
+    
+    bool draw_flag = 1;
+    void setVertexArray(float* vArr, unsigned int size)
+    {
+        mesh_vertx = vArr;
+        size_mesh_vertx = size;
+    }
+    void setIndexArray(unsigned int* iArr, unsigned int size)
+    {
+        mesh_indx = iArr;
+        size_mesh_indx = size;
+    }
+    
+private:
+    float* mesh_vertx;
+    unsigned int size_mesh_vertx;
+    unsigned int* mesh_indx;
+    unsigned int size_mesh_indx;
+    
+    Material mat;
+    
     void linkIBO()
     {
         unsigned int IBO;
         glGenBuffers(1, &IBO);
         glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, IBO);
-        glBufferData(GL_ELEMENT_ARRAY_BUFFER, size_mesh_indx, mesh_indx, GL_STATIC_DRAW);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, size_mesh_indx*sizeof(unsigned int), mesh_indx, GL_STATIC_DRAW);
     }
     void linkVBO()
     {
         unsigned int VBO;
         glGenBuffers(1, &VBO);
         glBindBuffer(GL_ARRAY_BUFFER, VBO);
-        glBufferData(GL_ARRAY_BUFFER, size_mesh_vertx, mesh_vertx, GL_STATIC_DRAW);
+        glBufferData(GL_ARRAY_BUFFER, size_mesh_vertx * sizeof(float), mesh_vertx, GL_STATIC_DRAW);
     }
     void linkMaterial()
     {
         return;
+    }
+    void genVAPointer()
+    {
+        glVertexAttribPointer(0, 2, GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0);
     }
     
 };

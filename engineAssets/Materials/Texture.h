@@ -21,6 +21,6 @@ class Texture
 public:
     Texture()
     {
-        ASSERT(false);
+//        ASSERT(false);
     }
 };

@@ -187,6 +187,7 @@
 		667C4ECC20CF79DA009C6270 /* Material.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Material.h; sourceTree = "<group>"; };
 		667C4ECE20CF7A8C009C6270 /* Shader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Shader.h; sourceTree = "<group>"; };
 		667C4ECF20CF7AE6009C6270 /* Texture.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Texture.h; sourceTree = "<group>"; };
+		667C4ED220D00E91009C6270 /* Default.shader */ = {isa = PBXFileReference; lastKnownFileType = text; path = Default.shader; sourceTree = "<group>"; };
 		66D34FBD20C490950014F08D /* Logger.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Logger.cpp; sourceTree = "<group>"; };
 		66D34FC220C491860014F08D /* libLogger.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libLogger.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		66D34FCB20C491C70014F08D /* libMudBathEngine.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libMudBathEngine.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -405,6 +406,22 @@
 			path = Materials;
 			sourceTree = "<group>";
 		};
+		667C4ED020D00E48009C6270 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				667C4ED120D00E55009C6270 /* shaders */,
+			);
+			path = res;
+			sourceTree = "<group>";
+		};
+		667C4ED120D00E55009C6270 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				667C4ED220D00E91009C6270 /* Default.shader */,
+			);
+			path = shaders;
+			sourceTree = "<group>";
+		};
 		66CB065B20A91DA1003973D1 = {
 			isa = PBXGroup;
 			children = (
@@ -529,6 +546,7 @@
 		66EB667720C4513F0048B3AA /* testFrameworks */ = {
 			isa = PBXGroup;
 			children = (
+				667C4ED020D00E48009C6270 /* res */,
 				66D3500120C4DBE40014F08D /* engineLogs */,
 				66EB667820C4513F0048B3AA /* Marshland.cpp */,
 				66EB667920C4513F0048B3AA /* Centrifudge.cpp */,

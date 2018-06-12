@@ -23,11 +23,24 @@ Renderer::~Renderer()
     renLogger->log("Renderer Destructor");
 }
 
-void Renderer::draw(RenderableObject &ro)
+void Renderer::draw()
 {
     renLogger->log("Rendering Draw Call");
-    ro.loadVAO();
-    glDrawElements(GL_TRIANGLES, ro.getIBOsize(), GL_UNSIGNED_INT, nullptr );
+    for(RenderableObject ro : r_objs)
+    {
+        if(ro.draw_flag)
+        {
+//            ro.loadVAO();
+            glDrawElements(GL_TRIANGLES, ro.getIBOsize(), GL_UNSIGNED_INT, nullptr );
+        }
+        
+    }
+    
+}
+
+void Renderer::loadObj(RenderableObject &ro)
+{
+    r_objs.push_back(ro);
 }
 
 void Renderer::prepareBackground(Pixel_POD p)
