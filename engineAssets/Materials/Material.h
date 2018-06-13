@@ -40,6 +40,7 @@ public:
     {
         for (Shader* s : shaderPrograms)
         {
+            s->CreateShader();
             glUseProgram(s->program_num);
             s->setPropertyValue("u_Color", 0.5f, 0.5f, 0.1f, 0.1f);
         }

@@ -91,31 +91,13 @@ void MBEngine::init()
     }
     
     ///
-    RenderableObject riverbank_ro = RenderableObject();
     
-    float positions[] = {
-        -0.5f, -0.5f,
-        0.5f, -0.5f,
-        0.5f, 0.5f,
-        -0.5f, 0.5f
-    };
     
-    unsigned int indices[] = {
-        0, 1, 2, 2, 3, 0
-    };
+
     
-    riverbank_ro.setVertexArray(positions, 8);
-    riverbank_ro.setIndexArray(indices, 6);
+    basicRend->prepareObjs();
     
-    riverbank_ro.loadVAO();
     
-    Material rbTest("-");
-    rbTest.addShader("/Users/dev/OpenGL/MudBath/MudBath/testFrameworks/res/shaders/Default.shader");
-    riverbank_ro.addMaterial(rbTest);
-    
-    riverbank_ro.enableShad();
-    
-    /*engine->*/loadRenderableObj(riverbank_ro);
     ///
     
     // GAME LOOP
@@ -159,9 +141,13 @@ void MBEngine::init()
 }
 ///////////////////////
 
-void MBEngine::loadRenderableObj(RenderableObject &ro)
+void MBEngine::loadRenderableObj(std::vector<RenderableObject*> &r_objs_vec)
 {
-    basicRend->loadObj(ro);
+    for( RenderableObject* robj : r_objs_vec)
+    {
+        basicRend->loadObj(robj);
+    }
+    
 }
 
 ///////////////////////

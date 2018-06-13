@@ -39,7 +39,7 @@ class Renderer
 private:
     int state;
     Logger* renLogger;
-    std::vector<RenderableObject> r_objs;
+    std::vector<RenderableObject*> r_objs;
     
     
 public:
@@ -47,6 +47,7 @@ public:
     ~Renderer();
     
     void draw();
+    void prepareObjs();
     void prepareBackground(Pixel_POD);
-    void loadObj(RenderableObject &ro);
+    void loadObj(RenderableObject* ro);
 };

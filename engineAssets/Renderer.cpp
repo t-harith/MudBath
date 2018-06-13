@@ -26,19 +26,32 @@ Renderer::~Renderer()
 void Renderer::draw()
 {
     renLogger->log("Rendering Draw Call");
-    for(RenderableObject ro : r_objs)
+    for(RenderableObject* ro : r_objs)
     {
-        if(ro.draw_flag)
+        if(ro->draw_flag)
         {
 //            ro.loadVAO();
-            glDrawElements(GL_TRIANGLES, ro.getIBOsize(), GL_UNSIGNED_INT, nullptr );
+            glDrawElements(GL_TRIANGLES, ro->getIBOsize(), GL_UNSIGNED_INT, nullptr );
         }
         
     }
     
 }
 
-void Renderer::loadObj(RenderableObject &ro)
+void Renderer::prepareObjs()
+{
+    for (RenderableObject* ro : r_objs)
+    {
+        
+        ro->loadVAO();
+        
+        
+        
+        ro->enableShad();
+    }
+}
+
+void Renderer::loadObj(RenderableObject* ro)
 {
     r_objs.push_back(ro);
 }

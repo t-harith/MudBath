@@ -93,7 +93,7 @@ public:
     MBEngine(std::string configFname,
              std::string outputFname);
     ~MBEngine();
-    void loadRenderableObj(RenderableObject &ro);
+    void loadRenderableObj(std::vector<RenderableObject*> &r_objs_vec);
     void init();
     
 };

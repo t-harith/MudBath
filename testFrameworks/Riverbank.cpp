@@ -28,27 +28,26 @@ int main()
     // Create Engine Object
     MBEngine* engine = new MBEngine("config/defaultConfig.txt", "_engineLog.txt");
     
-//    RenderableObject riverbank_ro = RenderableObject();
-//    
-//    float positions[] = {
-//        -0.5f, -0.5f,
-//        0.5f, -0.5f,
-//        0.5f, 0.5f,
-//        -0.5f, 0.5f
-//    };
-//    
-//    unsigned int indices[] = {
-//        0, 1, 2, 2, 3, 0
-//    };
-//    
-//    riverbank_ro.setVertexArray(positions, sizeof(positions));
-//    riverbank_ro.setIndexArray(indices, sizeof(indices));
-//    riverbank_ro.loadVAO();
-//    Material rbTest("-");
-//    rbTest.addShader("./res/shaders/Default.shader");
-//    riverbank_ro.addMaterial(rbTest);
-//    engine->loadRenderableObj(riverbank_ro);
-    //(renderable_objects_vec)
+    RenderableObject* riverbank_ro = new RenderableObject();
+    float positions[] = {
+        -0.5f, -0.5f,
+        0.5f, -0.5f,
+        0.5f, 0.5f,
+        -0.5f, 0.5f
+    };
+    
+    unsigned int indices[] = {
+        0, 1, 2, 2, 3, 0
+    };
+    Material rbTest("-");
+    rbTest.addShader("/Users/dev/OpenGL/MudBath/MudBath/testFrameworks/res/shaders/Default.shader");
+    riverbank_ro->addMaterial(rbTest);
+    riverbank_ro->setVertexArray(positions, 8);
+    riverbank_ro->setIndexArray(indices, 6);
+    std::vector<RenderableObject*> r_objs_vec;
+    r_objs_vec.push_back(riverbank_ro);
+    
+    engine->loadRenderableObj(r_objs_vec);
     
     engine->init();
     

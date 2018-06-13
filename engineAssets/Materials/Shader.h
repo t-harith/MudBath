@@ -19,6 +19,7 @@
 class Shader
 {
 private:
+    std::string filename;
     std::string vertexSource;
     std::string fragmentSource;
     
@@ -27,7 +28,17 @@ public:
     std::map<std::string, unsigned int> u_locations;
     
 public:
-    Shader(const std::string& filename)
+    Shader(const std::string& file)
+    {
+        filename = file;
+    }
+    
+    ~Shader()
+    {
+        glDeleteShader(program_num);
+    }
+    
+    void CreateShader()
     {
         ParseShader(filename);
         
@@ -53,12 +64,6 @@ public:
         // Clean
         glDeleteShader(vs);
         glDeleteShader(fs);
-        
-    }
-    
-    ~Shader()
-    {
-        glDeleteShader(program_num);
     }
     
     void setPropertyValue(const char* property_name, float val1, float val2, float val3, float val4)
