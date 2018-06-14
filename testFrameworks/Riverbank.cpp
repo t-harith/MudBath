@@ -28,6 +28,7 @@ int main()
     // Create Engine Object
     MBEngine* engine = new MBEngine("config/defaultConfig.txt", "_engineLog.txt");
     
+    // Object Creation
     RenderableObject* riverbank_ro = new RenderableObject();
     float positions[] = {
         -0.5f, -0.5f,
@@ -39,15 +40,18 @@ int main()
     unsigned int indices[] = {
         0, 1, 2, 2, 3, 0
     };
-    Material rbTest("-");
-    rbTest.addShader("/Users/dev/OpenGL/MudBath/MudBath/testFrameworks/res/shaders/Default.shader");
+    Material* rbTest = new Material("-");
+    Shader* sh = new Shader("res/shaders/Default.shader");
+    float color[] = { 0.22f, 0.7f, 0.47f, 0.8f };
+    sh->addProperty("u_Color", color);
+    rbTest->addShader(sh);
     riverbank_ro->addMaterial(rbTest);
     riverbank_ro->setVertexArray(positions, 8);
     riverbank_ro->setIndexArray(indices, 6);
     std::vector<RenderableObject*> r_objs_vec;
     r_objs_vec.push_back(riverbank_ro);
     
-    engine->loadRenderableObj(r_objs_vec);
+    engine->loadRenderableObjs(r_objs_vec);
     
     engine->init();
     
@@ -78,6 +82,7 @@ int main()
     }
     
     rbLogger->log("Closing Riverbank Test Environment");
+    delete engine;
     delete rbLogger;
     return 0;
 }

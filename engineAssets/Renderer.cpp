@@ -38,15 +38,23 @@ void Renderer::draw()
     
 }
 
-void Renderer::prepareObjs()
+void Renderer::prepareDraw()
+{
+    setupBlending();
+    prepareObjBuffers();
+}
+
+void Renderer::setupBlending()
+{
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+}
+
+void Renderer::prepareObjBuffers()
 {
     for (RenderableObject* ro : r_objs)
     {
-        
         ro->loadVAO();
-        
-        
-        
         ro->enableShad();
     }
 }

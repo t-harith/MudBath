@@ -61,6 +61,7 @@ MBEngine::~MBEngine()
 {
     // clear subsystems
     clearSubsystems();
+    clearAssets();
 }
 
 
@@ -90,13 +91,8 @@ void MBEngine::init()
         ASSERT(false);
     }
     
-    ///
-    
-    
-
-    
-    basicRend->prepareObjs();
-    
+    // Necessary to be done after gl is initialized
+    basicRend->prepareDraw();
     
     ///
     
@@ -104,24 +100,24 @@ void MBEngine::init()
     int exit = 0;
     while(!exit){
         
+        if(glfwWindowShouldClose(windowManager->window))
+        {
+            // publish event here/ command OVC
+            mbeCommand = EngineCommand::EXIT;
+            mbeState = EngineState::ABORTED;
+        }
+        
         switch(mbeState){
             case IDLE:
                 break;
             case ACTIVE:
-                if(glfwWindowShouldClose(windowManager->window))
-                {
-                    // publish event here/ command OVC
-                    mbeCommand = EngineCommand::EXIT;
-                    mbeState = EngineState::ABORTED;
-                    break;
-                }
-                
                 /* Render here */
                 basicRend->prepareBackground(Pixel_POD{0.12f, 0.12f, 0.12f, 1.0f});
                 basicRend->draw();
                 
                 /* Swap front and back buffers */
                 glfwSwapBuffers(windowManager->window);
+                mbeState = EngineState::IDLE;
                 break;
             case PAUSED:
                 break;
@@ -132,8 +128,9 @@ void MBEngine::init()
                 break;
         }
 
-        /* Poll for and process events */
-        glfwPollEvents();
+        /* Wait for and process events */
+        // glfwPollEvents() results in high cpu usage
+        glfwWaitEvents();
     
     }
     
@@ -141,10 +138,11 @@ void MBEngine::init()
 }
 ///////////////////////
 
-void MBEngine::loadRenderableObj(std::vector<RenderableObject*> &r_objs_vec)
+void MBEngine::loadRenderableObjs(std::vector<RenderableObject*> &r_objs_vec)
 {
     for( RenderableObject* robj : r_objs_vec)
     {
+        // stores object internally in renderer
         basicRend->loadObj(robj);
     }
     
@@ -153,11 +151,6 @@ void MBEngine::loadRenderableObj(std::vector<RenderableObject*> &r_objs_vec)
 ///////////////////////
 /*  Helper Functions */
 ///////////////////////
-// Asset Management
-void MBEngine::loadAssets()
-{
-    // to be impl;
-}
 
 
 // Window Funcs
@@ -280,6 +273,16 @@ void MBEngine::clearSubsystems()
     }
     if(basicAI != NULL){
         delete basicAI;
+    }
+}
+
+void MBEngine::clearAssets()
+{
+    // clear assets
+    // RenderableObjects
+    for (RenderableObject* ro : RenderableObject::ROList())
+    {
+        delete ro;
     }
 }
 

@@ -25,14 +25,6 @@
 
 #include "engineAssets/Objects/RenderableObject.h"
 
-struct Pixel_POD
-{
-    float r;
-    float g;
-    float b;
-    float a;
-};
-
 
 class Renderer
 {
@@ -41,13 +33,15 @@ private:
     Logger* renLogger;
     std::vector<RenderableObject*> r_objs;
     
+    void prepareObjBuffers();
+    void setupBlending();
     
 public:
     Renderer();
     ~Renderer();
     
     void draw();
-    void prepareObjs();
+    void prepareDraw();
     void prepareBackground(Pixel_POD);
     void loadObj(RenderableObject* ro);
 };

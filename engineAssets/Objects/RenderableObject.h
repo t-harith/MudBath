@@ -20,15 +20,22 @@ class RenderableObject : MoveableObject
 {
 public:
     RenderableObject()
-    :mat(Material("-"))
+    :mat(nullptr)
     {
         m_renderID = 0;
-        //(unsigned int)renderable_objects_list.size()+1;
-//        renderable_objects_list.push_back(this);
+        ROList().push_back(this);
+    }
+    ~RenderableObject()
+    {
+        delete mat;
     }
     unsigned int m_renderID;
-    static std::vector<RenderableObject*> renderable_objects_list;
-    
+    static std::vector<RenderableObject*>& ROList()
+    {
+        static std::vector<RenderableObject*> renderable_objects_list;
+        return renderable_objects_list;
+    }
+        
     void loadVAO()
     {
         glGenVertexArrays(1, &m_renderID);
@@ -38,12 +45,10 @@ public:
 //        linkMaterial();
         genVAPointer();
         glEnableVertexAttribArray(0);
-        
-       
     }
     void enableShad()
     {
-         mat.enableShaderPrograms();
+         mat->enableShaderPrograms();
     }
     
     unsigned int getIBOsize()
@@ -51,7 +56,7 @@ public:
         return size_mesh_indx;
     }
     
-    void addMaterial(const Material & mater)
+    void addMaterial(Material* mater)
     {
         mat = mater;
     }
@@ -74,7 +79,7 @@ private:
     unsigned int* mesh_indx;
     unsigned int size_mesh_indx;
     
-    Material mat;
+    Material* mat;
     
     void linkIBO()
     {

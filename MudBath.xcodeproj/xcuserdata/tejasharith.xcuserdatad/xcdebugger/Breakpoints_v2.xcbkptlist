@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MudBathEngine.cpp"
-            timestampString = "550614172.589334"
+            timestampString = "550689049.906683"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "276"
-            endingLineNumber = "276"
+            startingLineNumber = "269"
+            endingLineNumber = "269"
             landmarkName = "MBEngine::clearSubsystems()"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MudBathEngine.cpp"
-            timestampString = "550614172.589834"
+            timestampString = "550689049.9071"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "277"
-            endingLineNumber = "277"
+            startingLineNumber = "270"
+            endingLineNumber = "270"
             landmarkName = "MBEngine::clearSubsystems()"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MudBathEngine.cpp"
-            timestampString = "550614172.590173"
+            timestampString = "550689049.907365"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "295"
-            endingLineNumber = "295"
+            startingLineNumber = "298"
+            endingLineNumber = "298"
             landmarkName = "MBEngine::subsystemsInit()"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MudBathEngine.cpp"
-            timestampString = "550614172.590506"
+            timestampString = "550689049.9076281"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
             landmarkName = "MBEngine::init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MudBathEngine.cpp"
-            timestampString = "550614172.590849"
+            timestampString = "550689049.9078521"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "195"
-            endingLineNumber = "195"
+            startingLineNumber = "188"
+            endingLineNumber = "188"
             landmarkName = "MBEngine::setWindowParams(std::string name, int width, int height, bool full_screen, GLFWwindow* share)"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MudBathEngine.cpp"
-            timestampString = "550614172.591182"
+            timestampString = "550689049.9080811"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "193"
-            endingLineNumber = "193"
+            startingLineNumber = "186"
+            endingLineNumber = "186"
             landmarkName = "MBEngine::setWindowParams(std::string name, int width, int height, bool full_screen, GLFWwindow* share)"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,11 +154,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MudBathEngine.cpp"
-            timestampString = "550614172.5915149"
+            timestampString = "550689049.9083019"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "198"
-            endingLineNumber = "198"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
             landmarkName = "MBEngine::setWindowParams(std::string name, int width, int height, bool full_screen, GLFWwindow* share)"
             landmarkType = "7">
          </BreakpointContent>
@@ -170,11 +170,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MudBathEngine.cpp"
-            timestampString = "550614172.59185"
+            timestampString = "550689049.908527"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "196"
-            endingLineNumber = "196"
+            startingLineNumber = "189"
+            endingLineNumber = "189"
             landmarkName = "MBEngine::setWindowParams(std::string name, int width, int height, bool full_screen, GLFWwindow* share)"
             landmarkType = "7">
          </BreakpointContent>
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MudBathEngine.cpp"
-            timestampString = "550614172.59218"
+            timestampString = "550689049.908747"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "197"
-            endingLineNumber = "197"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
             landmarkName = "MBEngine::setWindowParams(std::string name, int width, int height, bool full_screen, GLFWwindow* share)"
             landmarkType = "7">
          </BreakpointContent>
@@ -330,7 +330,7 @@
                   moduleName = "Riverbank"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dev/OpenGL/MudBath/MudBath/ConfigReader/Chameleon.cpp"
-                  timestampString = "550614173.00813"
+                  timestampString = "550689050.4374321"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -345,7 +345,7 @@
                   moduleName = "Riverbank"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/dev/OpenGL/MudBath/MudBath/ConfigReader/Chameleon.cpp"
-                  timestampString = "550614173.011703"
+                  timestampString = "550689050.441141"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "59"
@@ -362,7 +362,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "engineAssets/Materials/Material.h"
-            timestampString = "550614172.592645"
+            timestampString = "550688982.614218"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -410,7 +410,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "engineAssets/Renderer.cpp"
-            timestampString = "550614172.592988"
+            timestampString = "550689049.909068"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "34"
@@ -426,7 +426,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "engineAssets/Renderer.cpp"
-            timestampString = "550614172.593274"
+            timestampString = "550689049.909332"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
@@ -442,11 +442,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MudBathEngine.cpp"
-            timestampString = "550614172.593521"
+            timestampString = "550689049.909529"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "MBEngine::init()"
             landmarkType = "7">
          </BreakpointContent>
@@ -457,44 +457,12 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "engineAssets/Objects/RenderableObject.h"
-            timestampString = "550614172.593819"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "40"
-            endingLineNumber = "40"
-            landmarkName = "loadVAO()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "engineAssets/Objects/RenderableObject.h"
-            timestampString = "550614172.594119"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "34"
-            endingLineNumber = "34"
-            landmarkName = "loadVAO()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "engineAssets/Materials/Shader.h"
-            timestampString = "550614172.594382"
+            timestampString = "550689049.909753"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
             landmarkName = "setPropertyValue(const char* property_name, float val1, float val2, float val3, float val4)"
             landmarkType = "7">
          </BreakpointContent>
@@ -506,12 +474,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "engineAssets/Materials/Material.h"
-            timestampString = "550614172.594443"
+            timestampString = "550688982.615581"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "41"
-            endingLineNumber = "41"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
             landmarkName = "enableShaderPrograms()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MudBathEngine.cpp"
+            timestampString = "550689049.910031"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
+            landmarkName = "MBEngine::init()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

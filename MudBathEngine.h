@@ -81,19 +81,19 @@ private:
     void clearSubsystems();
     void subsystemsInit();
     void subsystemsTerminate();
+    void clearAssets();
     
     /* Window Setup Funcs */
     void windowInit(int version_maj, int version_min, unsigned int profile, bool forward_compat);
     static void window_close_callback(GLFWwindow* window, int key, int scanncode, int action, int mods);
     void setWindowParams(std::string name, int width, int height, bool full_screen, GLFWwindow* share);
-    
-    void loadAssets();
+
     
 public:
     MBEngine(std::string configFname,
              std::string outputFname);
     ~MBEngine();
-    void loadRenderableObj(std::vector<RenderableObject*> &r_objs_vec);
+    void loadRenderableObjs(std::vector<RenderableObject*> &r_objs_vec);
     void init();
     
 };

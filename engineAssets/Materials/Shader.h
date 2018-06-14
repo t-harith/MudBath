@@ -16,16 +16,26 @@
 #include <fstream>
 #include <map>
 
+struct Pixel_POD
+{
+    float r;
+    float g;
+    float b;
+    float a;
+};
+
 class Shader
 {
 private:
     std::string filename;
     std::string vertexSource;
     std::string fragmentSource;
+    std::vector<std::pair<std::string, float*>> pnames;
+    Pixel_POD color;
     
 public:
     unsigned int program_num = 0;
-    std::map<std::string, unsigned int> u_locations;
+    
     
 public:
     Shader(const std::string& file)
@@ -75,6 +85,23 @@ public:
         glUniform4f(location, val1, val2, val3, val4);
     }
     
+    void addProperty(std::string prop_name, float* flo_ptr)
+    {
+        pnames.push_back({prop_name, flo_ptr});
+    }
+    
+    void loadPropertyVals()
+    {
+        // To be templated in the future
+        for( int i = 0; i < pnames.size(); ++i )
+        {
+            int location = glGetUniformLocation(program_num, pnames[i].first.c_str());
+            if(location == -1)
+                std::cout << "shader property name: " << pnames[i].first << " not found"  << std::endl;
+            glUniform4f(location, pnames[i].second[0], pnames[i].second[1], pnames[i].second[2], pnames[i].second[3]);
+        }
+    }
+
 private:
     void ParseShader( const std::string &filename)
     {

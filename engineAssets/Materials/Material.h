@@ -18,23 +18,29 @@
 class Material
 {
     std::vector<Shader*> shaderPrograms;
-    Texture tex;
+    Texture* tex;
     
 public:
     Material(const std::string textureFname)
     {
-        if(textureFname != "-")
-        {
-            tex = Texture();
-        }
+        tex = nullptr;
     }
-    void addShader(const std::string shaderFname)
+    ~Material()
     {
-        shaderPrograms.push_back(new Shader(shaderFname));
+        for (Shader * s : shaderPrograms)
+        {
+            delete s;
+        }
+        delete tex;
+    }
+    unsigned int addShader(Shader *shad)
+    {
+        shaderPrograms.push_back(shad);
+        return static_cast<unsigned int>(shaderPrograms.size());
     }
     void addTexture()
     {
-        tex = Texture();
+        tex = new Texture();
     }
     void enableShaderPrograms()
     {
@@ -42,7 +48,7 @@ public:
         {
             s->CreateShader();
             glUseProgram(s->program_num);
-            s->setPropertyValue("u_Color", 0.5f, 0.5f, 0.1f, 0.1f);
+            s->loadPropertyVals();
         }
     }
 };
